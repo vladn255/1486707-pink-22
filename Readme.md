@@ -1,7 +1,7 @@
 # Личный проект «Пинк» 
 
 * Студент: [Владислав Несвит](https://up.htmlacademy.ru/adaptive/22/user/1486707).
-* Наставник: `Неизвестно`.
+* Наставник: [Алёна Сиприкова](https://htmlacademy.ru/profile/asiprikova).
 
 ---
 
