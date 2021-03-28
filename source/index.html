@@ -1,12 +1,143 @@
 <!DOCTYPE html>
-<html lang="ru">
-  <head>
-    <meta charset="utf-8">
-    <title>HTML Academy: Пинк</title>
-  </head>
-  <body>
+<html class="page" lang="ru">
 
-    <p>Репозиторий создан для обучения на профессиональном онлайн‑курсе «<a href="https://htmlacademy.ru/intensive/adaptive">HTML и CSS. Адаптивная вёрстка и автоматизация</a>».</p>
+<head>
+  <meta charset="utf-8">
+  <title>HTML Academy: Пинк</title>
+</head>
 
-  </body>
+<body class="page__body">
+  <header class="page-header">
+    <a class="page-header__logo">
+      Pink
+    </a>
+    <nav class="main-nav">
+      <button class="main-nav__toggle main-nav__toggle--open" type="button">
+        <span class="visually-hidden">Open menu</span>
+      </button>
+      <div class="main-nav__wrapper">
+        <ul class="main-nav__list site-list">
+          <li class="site-list__item site-list__item--active">
+            <a class="site-list__link">
+              Главная
+            </a>
+          </li>
+          <li class="site-list__item">
+            <a class="site-list__link" href="photo.html">
+              Фотографии
+            </a>
+          </li>
+          <li class="site-list__item">
+            <a class="site-list__link" href="form.html">
+              Конкурс
+            </a>
+          </li>
+          <li class="site-list__item">
+            <a class="site-list__link" href="#">
+              Html Academy
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <main class="page-main">
+    <section class="banner banner--index">
+      <h1 class="banner__text page-title page-title--white">
+        Взгляните на жизнь иначе!
+      </h1>
+      <img src="https://via.placeholder.com/150x150" width="320" height="286"
+        alt="hand holding a phone with a pink picture on it">
+      <div class="download-info">
+        <a class="download-info__link button" href="#">
+          Скачать приложение
+        </a>
+        <ul class="download-info__platforms-list">
+          <li class="download-info__platforms-item">
+            <a class="download-info__platforms-link" href="#">
+              <img src="https://via.placeholder.com/150x150" class="download-info__img" alt="apple picture">
+            </a>
+          </li>
+          <li class="download-info__platforms-item">
+            <a class="download-info__platforms-link" href="#">
+              <img src="https://via.placeholder.com/150x150" class="download-info__img" alt="android picture">
+            </a>
+          </li>
+          <li class="download-info__platforms-item">
+            <a class="download-info__platforms-link" href="#">
+              <img src="https://via.placeholder.com/150x150" class="download-info__img" alt="microsoft picture">
+            </a>
+          </li>
+        </ul>
+        <p class="download-info__explanation">
+          Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8
+        </p>
+      </div>
+    </section>
+    <div class="slogan">
+      <h3 class="page-title">
+        Устали от серости мегаполиса?
+      </h3>
+      <h3 class="page-title">
+        Нам есть что вам предложить
+      </h3>
+    </div>
+    <section class="features">
+      <h2 class="visually-hidden">Features</h2>
+      <ul class="features__list">
+        <li class="features__item">
+          <h3 class="features__title">
+            Поднимает настроение
+          </h3>
+          <p class="features__text">
+            Приложение позволит вам победить осеннюю хандру и депрессию буквально в несколько кликов!
+          </p>
+        </li>
+        <li>
+          <h3 class="features__title">
+            Меняет мир вокруг
+          </h3>
+          <p class="features__text">
+            Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект
+          </p>
+        </li>
+        <li>
+          <h3 class="features__title">
+            Заводит новых друзей
+          </h3>
+          <p class="features__text">
+            Ставьте лайки, комментируйте, делитесь фотографиями с друзьями и заводите новых
+          </p>
+        </li>
+      </ul>
+      <img class="feature__img" src="https://via.placeholder.com/150x150" width="157" height="320"
+        alt="iphone screen with a smiley face">
+    </section>
+  </main>
+
+  <footer class="page-footer">
+    <a class="page-footer__logo">
+      Pink
+    </a>
+    <div class="socials">
+      <ul class="socials__list">
+        <li class="socials__item">
+          <a class="socials__link--twitter" href="#"></a>
+        </li>
+        <li class="socials__item">
+          <a class="socials__link--facebook" href="#"></a>
+        </li>
+        <li class="socials__item">
+          <a class="socials__link--youtube" href="#"></a>
+        </li>
+      </ul>
+    </div>
+    <div class="page-footer__copyright copyright">
+      <b class="copyright__text">Разработано:</b>
+      <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive"></a>
+    </div>
+  </footer>
+</body>
+
 </html>

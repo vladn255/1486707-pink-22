@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html class="page" lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <title>HTML Academy: Пинк</title>
+</head>
+
+<body class="page__body">
+  <header class="page-header">
+    <a class="page-header__logo" href="index.html">
+      Pink
+    </a>
+    <nav class="main-nav">
+      <button class="main-nav__toggle" type="button">
+        <span class="visually-hidden">Open menu</span>
+      </button>
+      <div class="main-nav__wrapper">
+        <ul class="main-nav__list site-list">
+          <li class="site-list__item">
+            <a class="site-list__link" href="index.html">
+              Главная
+            </a>
+          </li>
+          <li class="site-list__item">
+            <a class="site-list__link" href="photo.html">
+              Фотографии
+            </a>
+          </li>
+          <li class="site-list__item site-list__item--active">
+            <a class="site-list__link">
+              Конкурс
+            </a>
+          </li>
+          <li class="site-list__item">
+            <a class="site-list__link" href="#">
+              Html Academy
+            </a>
+          </li>
+        </ul>
+        <ul class="main-nav__list controls__list">
+          <li class="controls__item">
+            <button class="controls__button button-close" type="button">
+              <span class="visually-hidden">Close menu</span>
+            </button>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <main class="page-main">
+    <div class="banner">
+      <h1 class="banner__text page-title page-title--white">
+        Конкурс на самое безбашенное путешествие с Пинк
+      </h1>
+    </div>
+    <section class="review-page">
+      <h1 class="visually-hidden">Form credentials</h1>
+      <form action="https://echo.htmlacademy.ru" method="post" class="form">
+        <p class="form__intro">
+          Поделитесь своей историей и получите шанс выиграть ценный приз - 1000 миль на вашу бонусную карту!
+        </p>
+        <div class="form-input input">
+          <label class="input__label" for="surname">Фамилия:</label>
+          <input class="input__field" id="surname" type="text" name="surname" placeholder="Укажите фамилию*">
+        </div>
+        <div class="form-input input">
+          <label class="input__label" for="name">Имя:</label>
+          <input class="input__field" id="name" type="text" name="name" placeholder="Введите ваше имя*">
+        </div>
+        <div class="form-input input">
+          <label class="input__label" for="fathers_name">Имя:</label>
+          <input class="input__field" id="fathers_name" type="text" name="fathers_name"
+            placeholder="Ну и отчество тоже*">
+        </div>
+      </form>
+    </section>
+  </main>
+
+  <footer class="page-footer">
+    <a class="page-footer__logo">
+      Pink
+    </a>
+    <div class="socials">
+      <ul class="socials__list">
+        <li class="socials__item">
+          <a class="socials__link--twitter" href="#"></a>
+        </li>
+        <li class="socials__item">
+          <a class="socials__link--facebook" href="#"></a>
+        </li>
+        <li class="socials__item">
+          <a class="socials__link--youtube" href="#"></a>
+        </li>
+      </ul>
+    </div>
+    <div class="page-footer__copyright copyright">
+      <b class="copyright__text">Разработано:</b>
+      <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive"></a>
+    </div>
+  </footer>
+</body>
+
+</html>
