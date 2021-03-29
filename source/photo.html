@@ -1,20 +1,23 @@
 <!DOCTYPE html>
-<html class="page" lang="ru">
+<html lang="ru">
 
 <head>
   <meta charset="utf-8">
   <title>HTML Academy: Пинк</title>
 </head>
 
-<body class="page__body">
+<body class="page">
   <header class="page-header">
-    <a class="page-header__logo" href="index.html">
-      Pink
-    </a>
-    <nav class="main-nav">
-      <button class="main-nav__toggle" type="button">
-        <span class="visually-hidden">Open menu</span>
+    <div class="page-header-logo">
+      <a class="page-header-logo__link" href="index.html">
+        Pink
+      </a>
+      <button class="page-header-logo__toggle" type="button">
+        <span class="visually-hidden">Открыть меню</span>
+        <span class="visually-hidden">Закрыть меню</span>
       </button>
+    </div>
+    <nav class="main-nav">
       <div class="main-nav__wrapper">
         <ul class="main-nav__list site-list">
           <li class="site-list__item">
@@ -33,16 +36,9 @@
             </a>
           </li>
           <li class="site-list__item">
-            <a class="site-list__link" href="#">
+            <a class="site-list__link" href="https://htmlacademy.ru/intensive/adaptive">
               Html Academy
             </a>
-          </li>
-        </ul>
-        <ul class="main-nav__list controls__list">
-          <li class="controls__item">
-            <button class="controls__button button-close" type="button">
-              <span class="visually-hidden">Close menu</span>
-            </button>
           </li>
         </ul>
       </div>
@@ -51,21 +47,21 @@
 
   <main class="page-main">
 
-    <div class="banner">
+    <section class="banner">
       <h1 class="banner__text page-title page-title--white">
         Фотографии пользователей
       </h1>
-    </div>
+    </section>
 
     <section class="posts">
-      <h1 class="visually-hidden">User posts</h1>
+      <h1 class="visually-hidden">Записи пользователей</h1>
       <p class="posts__intro">
         Взгляните на фотографии, которые выкладывают пользователи! Видите, как не хватает ваших?
       </p>
 
       <article class="posts__item post">
         <span class="post__img-of-the-day">Панорама дня</span>
-        <img class="post__photo posts__photo--wide" src="https://via.placeholder.com/150x150" width="320" height="137"
+        <img class="post__photo post__photo--wide" src="https://via.placeholder.com/150x150" width="320" height="137"
           alt="post photo 1">
         <div class="post__info">
           <cite class="post__author">
@@ -164,25 +160,60 @@
         </div>
       </article>
     </section>
+
+    <section class="photo-editor">
+      <h2 class="visually-hidden">Photo editor</h2>
+      <p class="photo-editor__text">
+        Затмите их всех!<br>Выкладывайте все, что накопилось в телефоне!
+      </p>
+      <div class="photo-editor">
+        <img class="photo-editor__photo" src="https://via.placeholder.com/150x150" alt="user's photo">
+        <form class="form form--editor" action="https://echo.htmlacademy.ru" method="post">
+          <ul class="tools-set">
+            <li class="tools-set__item radio">
+              <input class="radio__input" type="radio" id="radio-crop" value="crop" checked>
+              <label class="radio__label radio__label--tools-set" for id="radio-crop"></label>
+              <span class="radio__icon radio__icon--crop"></span>
+              </label>
+              <input class="tools-set__range" type="range">
+            </li>
+            <li class="tools-set__item radio">
+              <input class="radio__input" type="radio" id="radio-fill" value="fill" checked>
+              <label class="radio__label radio__label--tools-set" for id="radio-fill"></label>
+              <span class="radio__icon radio__icon--crop"></span>
+              </label>
+              <input class="tools-set__range" type="range">
+            </li>
+            <li class="tools-set__item radio">
+              <input class="radio__input" type="radio" id="radio-contrast" value="contrast" checked>
+              <label class="radio__label radio__label--tools-set" for id="radio-fill"></label>
+              <span class="radio__icon radio__icon--contrast"></span>
+              </label>
+              <input class="tools-set__range" type="range">
+            </li>
+          </ul>
+          <button class="button" type="submit">Запостить</button>
+          <button class="button" type="reset">Отмена</button>
+        </form>
+      </div>
+    </section>
   </main>
 
   <footer class="page-footer">
     <a class="page-footer__logo">
       Pink
     </a>
-    <div class="socials">
-      <ul class="socials__list">
-        <li class="socials__item">
-          <a class="socials__link--twitter" href="#"></a>
-        </li>
-        <li class="socials__item">
-          <a class="socials__link--facebook" href="#"></a>
-        </li>
-        <li class="socials__item">
-          <a class="socials__link--youtube" href="#"></a>
-        </li>
-      </ul>
-    </div>
+    <ul class="socials">
+      <li class="socials__item">
+        <a class="socials__link socials__link--twitter" href="#"></a>
+      </li>
+      <li class="socials__item">
+        <a class="socials__link socials__link--facebook" href="#"></a>
+      </li>
+      <li class="socials__item">
+        <a class="socials__link socials__link--youtube" href="#"></a>
+      </li>
+    </ul>
     <div class="page-footer__copyright copyright">
       <b class="copyright__text">Разработано:</b>
       <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive"></a>

@@ -1,20 +1,23 @@
 <!DOCTYPE html>
-<html class="page" lang="ru">
+<html lang="ru">
 
 <head>
   <meta charset="utf-8">
   <title>HTML Academy: Пинк</title>
 </head>
 
-<body class="page__body">
+<body class="page">
   <header class="page-header">
-    <a class="page-header__logo">
-      Pink
-    </a>
-    <nav class="main-nav">
-      <button class="main-nav__toggle main-nav__toggle--open" type="button">
-        <span class="visually-hidden">Open menu</span>
+    <div class="page-header-logo">
+      <a class="page-header-logo__link" href="index.html">
+        Pink
+      </a>
+      <button class="page-header-logo__toggle" type="button">
+        <span class="visually-hidden">Открыть меню</span>
+        <span class="visually-hidden">Закрыть меню</span>
       </button>
+    </div>
+    <nav class="main-nav">
       <div class="main-nav__wrapper">
         <ul class="main-nav__list site-list">
           <li class="site-list__item site-list__item--active">
@@ -33,7 +36,7 @@
             </a>
           </li>
           <li class="site-list__item">
-            <a class="site-list__link" href="#">
+            <a class="site-list__link" href="https://htmlacademy.ru/intensive/adaptive">
               Html Academy
             </a>
           </li>
@@ -47,8 +50,6 @@
       <h1 class="banner__text page-title page-title--white">
         Взгляните на жизнь иначе!
       </h1>
-      <img src="https://via.placeholder.com/150x150" width="320" height="286"
-        alt="hand holding a phone with a pink picture on it">
       <div class="download-info">
         <a class="download-info__link button" href="#">
           Скачать приложение
@@ -76,15 +77,15 @@
       </div>
     </section>
     <div class="slogan">
-      <h3 class="page-title">
+      <p class="page-title">
         Устали от серости мегаполиса?
-      </h3>
-      <h3 class="page-title">
+      </p>
+      <p class="page-title">
         Нам есть что вам предложить
-      </h3>
+      </p>
     </div>
     <section class="features">
-      <h2 class="visually-hidden">Features</h2>
+      <h2 class="visually-hidden">Особенности</h2>
       <ul class="features__list">
         <li class="features__item">
           <h3 class="features__title">
@@ -111,8 +112,90 @@
           </p>
         </li>
       </ul>
-      <img class="feature__img" src="https://via.placeholder.com/150x150" width="157" height="320"
-        alt="iphone screen with a smiley face">
+    </section>
+
+    <div class="reviews">
+      <div class="slider">
+        <blockquote class="slider__item">
+          <cite class="reviews__author">
+            Николай Петров
+          </cite>
+          <p class="reviews__text">
+            «Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я
+            познакомился со своей будущей женой в комментариях к выложенной фотографии!»
+          </p>
+        </blockquote>
+        <p class="slider__toggles">
+          <button class="slider__toggle slider__toggle--current" type="button"></button>
+          <button class="slider__toggle" type="button"></button>
+          <button class="slider__toggle" type="button"></button>
+        </p>
+      </div>
+    </div>
+
+    <div class="payment-plans">
+      <div class="slider slider--table">
+        <table class="payment-plans__table table">
+          <tr class="table__headline">
+            <td class="table__data table__data--headline">
+              <span class="payment-plans__hit">Хит</span>
+              <h2 class="payment-plans__category">Стандарт</h2>
+            </td>
+          </tr>
+          <tr class="table__row">
+            <td class="table__data table__data--desc">
+              Розовый фильтр
+            </td>
+            <td class="table__data table__data--yes">
+            </td>
+          </tr>
+          <tr class="table__row">
+            <td class="table__data table__data--desc">
+              Смайлики
+            </td>
+            <td class="table__data table__data--yes">
+            </td>
+          </tr>
+          <tr class="table__row">
+            <td class="table__data table__data--desc">
+              Комментарии
+            </td>
+            <td class="table__data table__data--no">
+            </td>
+          </tr>
+        </table>
+        <p class="slider__toggles">
+          <button class="slider__toggle" type="button"></button>
+          <button class="slider__toggle slider__toggle--current" type="button"></button>
+          <button class="slider__toggle" type="button"></button>
+        </p>
+      </div>
+    </div>
+
+    <section class="contacts">
+      <div class="contacts-text">
+        <h3 class="page-title">
+          Остались вопросы?
+        </h3>
+        <h3 class="page-title">
+          Свяжитесь с нами!
+        </h3>
+      </div>
+      <div class="contacts__container">
+        <h4 class="contacts__title">Звоните:</h4>
+        <a class="contacts__text" href="tel:+78125556666">+7 (812) 555-66-66</a>
+      </div>
+      <div class="contacts__container">
+        <h4 class="contacts__title">Пишите:</h4>
+        <a class="contacts__text" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
+      </div>
+      <div class="contacts__container">
+        <h4 class="contacts__title">Приезжайте в гости:</h4>
+        <address class="contacts__text">ул. Большая<br>Конюшенная, 19/8</address>
+      </div>
+      <div class="contacts__map-wrapper">
+        <img class="map" src="https://via.placeholder.com/150x150" alt="map to the studio">
+      </div>
     </section>
   </main>
 
@@ -120,19 +203,17 @@
     <a class="page-footer__logo">
       Pink
     </a>
-    <div class="socials">
-      <ul class="socials__list">
-        <li class="socials__item">
-          <a class="socials__link--twitter" href="#"></a>
-        </li>
-        <li class="socials__item">
-          <a class="socials__link--facebook" href="#"></a>
-        </li>
-        <li class="socials__item">
-          <a class="socials__link--youtube" href="#"></a>
-        </li>
-      </ul>
-    </div>
+    <ul class="socials">
+      <li class="socials__item">
+        <a class="socials__link socials__link--twitter" href="#"></a>
+      </li>
+      <li class="socials__item">
+        <a class="socials__link socials__link--facebook" href="#"></a>
+      </li>
+      <li class="socials__item">
+        <a class="socials__link socials__link--youtube" href="#"></a>
+      </li>
+    </ul>
     <div class="page-footer__copyright copyright">
       <b class="copyright__text">Разработано:</b>
       <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive"></a>
