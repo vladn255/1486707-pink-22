@@ -1,0 +1,75 @@
+// Colors
+
+@bg-black: #000000;
+@bg-darkgrey: #283645;
+@bg-green: #2aab6d;
+@bg-lightgrey: #e5e5e5;
+@bg-white: #ffffff;
+@bg-red: #d22856;
+
+@static-white: #ffffff;
+@static-green: #2AAB6D;
+@static-red: #d22856;
+@hover-red: #d22856;
+@hover-green: #1C9B5E;
+@down-grey: #ffffff;
+@down-red: #d22856;
+@down-green: #1C9B5E;
+@bullet-grey: #283645;
+
+@font-white: #ffffff;
+@font-black: #000000;
+@font-red: #d22856;
+
+// Fonts
+
+@font-face {
+  font-family: "Open Sans";
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+  src: url("../fonts/opensans.woff2") format("woff2"),
+    url("../fonts/opensans.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Open Sans";
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+  src: url("../fonts/opensansbold.woff2") format("woff2"),
+    url("../fonts/opensansbold.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Open Sans";
+  font-weight: lighter;
+  font-style: normal;
+  font-display: swap;
+  src: url("../fonts/opensanslight.woff2") format("woff2"),
+    url("../fonts/opensanslight.woff") format("woff");
+}
+
+// Globals
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  text-decoration: none;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
