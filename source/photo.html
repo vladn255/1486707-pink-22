@@ -3,31 +3,32 @@
 
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>HTML Academy: Пинк</title>
   <link href="css/style.css" rel="stylesheet">
 </head>
 
 <body class="page">
   <header class="page-header">
-    <div class="page-header-logo">
-      <a class="page-header-logo__link" href="index.html">
-        Pink
-      </a>
-      <button class="page-header-logo__toggle" type="button">
-        <span class="visually-hidden">Открыть меню</span>
-        <span class="visually-hidden">Закрыть меню</span>
-      </button>
-    </div>
     <nav class="main-nav">
+      <div class="page-header-logo">
+        <a class="page-header-logo__link" href="index.html">
+          Pink
+        </a>
+        <button class="page-header-logo__toggle" type="button">
+          <span class="visually-hidden">Открыть меню</span>
+          <span class="visually-hidden">Закрыть меню</span>
+        </button>
+      </div>
       <div class="main-nav__wrapper">
         <ul class="main-nav__list site-list">
-          <li class="site-list__item">
-            <a class="site-list__link" href="index.html">
+          <li class="site-list__item site-list__item--active">
+            <a class="site-list__link">
               Главная
             </a>
           </li>
-          <li class="site-list__item site-list__item--active">
-            <a class="site-list__link">
+          <li class="site-list__item">
+            <a class="site-list__link" href="photo.html">
               Фотографии
             </a>
           </li>
@@ -49,18 +50,18 @@
   <main class="page-main">
 
     <section class="banner">
-      <h1 class="banner__text page-title page-title--white">
+      <h1 class="banner__text page-title page-title--white container">
         Фотографии пользователей
       </h1>
     </section>
 
-    <section class="posts">
+    <section class="posts container">
       <h1 class="visually-hidden">Записи пользователей</h1>
       <p class="posts__intro">
         Взгляните на фотографии, которые выкладывают пользователи! Видите, как не хватает ваших?
       </p>
 
-      <article class="posts__item post">
+      <article class="posts__item post post--of-the-day">
         <span class="post__img-of-the-day">Панорама дня</span>
         <img class="post__photo post__photo--wide" src="https://via.placeholder.com/150x150" width="320" height="137"
           alt="post photo 1">
@@ -167,9 +168,9 @@
       <p class="photo-editor__text">
         Затмите их всех!\nВыкладывайте все, что накопилось в телефоне!
       </p>
-      <div class="photo-editor">
+      <div class="photo-editor__wrapper container">
         <img class="photo-editor__photo" src="https://via.placeholder.com/150x150" alt="user's photo">
-        <form class="form form--editor" action="https://echo.htmlacademy.ru" method="post">
+        <form class="form form--editor container" action="https://echo.htmlacademy.ru" method="post">
           <ul class="tools-set">
             <li class="tools-set__item radio">
               <input class="radio__input" type="radio" id="radio-crop" value="crop" checked>
@@ -197,7 +198,7 @@
     </section>
   </main>
 
-  <footer class="page-footer">
+  <footer class="page-footer container">
     <a class="page-footer__logo">
       Pink
     </a>

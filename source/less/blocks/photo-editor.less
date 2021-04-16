@@ -1,8 +1,42 @@
 .photo-editor {
   background-color: @bg-lightgrey;
+  text-align: center;
+
+  @media (min-width: @desktop-width) {
+    background-color: @bg-white;
+  }
+}
+
+.photo-editor__wrapper {
+  @media (min-width: @tablet-width) {
+    display: flex;
+    padding-top: 57px;
+    padding-bottom: 54px;
+  }
+
+  @media (min-width: @desktop-width) {
+    background-color: @bg-lightgrey;
+    justify-content: space-between;
+    padding-top: 58px;
+    padding-bottom: 54px;
+  }
+}
+
+.photo-editor__photo {
+  @media (min-width: @tablet-width) {
+    width: 53%;
+    padding-right: 10px;
+  }
 }
 
 .photo-editor__text {
   font-size: @fs-base;
   text-align: center;
+
+  @media (min-width: @tablet-width) {
+    font-size: 18px;
+    line-height: 30px;
+    padding-top: 43px;
+    padding-bottom: 104px;
+  }
 }

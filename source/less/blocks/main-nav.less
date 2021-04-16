@@ -1,8 +1,14 @@
-.page-header {
-  background-color: @bg-darkgrey;
+.main-nav {
+  @media (min-width: @desktop-width) {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    max-width: 960px;
+    margin: auto;
+  }
 }
 
-.page-header-logo {
+.main-nav__top {
   position: relative;
   display: flex;
   justify-content: space-between;
@@ -22,10 +28,4 @@
   @media (min-width: @desktop-width) {
     margin-right: 225px;
   }
-}
-
-.page-header-logo__link {
-  text-transform: uppercase;
-  color: @font-white;
-  font-weight: bold;
 }

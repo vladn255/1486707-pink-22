@@ -8,7 +8,7 @@
   padding-right: 59px;
 
   font-weight: bold;
-  font-size: @fsa-title;
+  font-size: @fs-title;
   line-height: @lh-base;
   text-align: center;
   color: @static-red;
@@ -18,6 +18,23 @@
   border-color: @static-red;
   border-radius: 30px;
   background-color: transparent;
+
+  @media (min-width: @tablet-width) {
+    padding-top: 16px;
+    padding-bottom: 17px;
+    margin-bottom: 23px;
+    margin-left: 17px;
+    margin-right: -4px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 16px;
+    padding-bottom: 17px;
+    margin-bottom: 23px;
+    margin-left: 0;
+    margin-right: 0;
+    width: 183px;
+  }
 }
 
 .button--submit {

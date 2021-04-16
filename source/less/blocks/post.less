@@ -1,5 +1,15 @@
 .post {
   background-color: @bg-lightgrey;
+
+  @media (min-width: @tablet-width) {
+    width: 50%;
+    position: relative;
+    margin-bottom: 22px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 30%;
+  }
 }
 
 .post__img-of-the-day {
@@ -16,6 +26,19 @@
   padding-right: 20px;
   padding-bottom: 14px;
   padding-left: 20px;
+
+  position: absolute;
+}
+
+.post__info {
+  @media (min-width: @tablet-width) {
+    padding-top: 7px;
+    padding-bottom: 10px;
+    padding-left: 30px;
+    padding-right: 10px;
+    text-align: start;
+    min-height: 112px;
+  }
 }
 
 .post__author {
@@ -25,6 +48,11 @@
   font-style: normal;
 
   margin-bottom: 14px;
+
+  @media (min-width: @tablet-width) {
+    order: 0;
+    margin-bottom: 0;
+  }
 }
 
 .post__time {
@@ -32,6 +60,10 @@
   font-size: 12px;
   line-height: @lh-title;
   text-transform: uppercase;
+
+  @media (min-width: @tablet-width) {
+    order: 1;
+  }
 }
 
 .post__text {
@@ -39,6 +71,12 @@
   line-height: 24px;
   margin: 0;
   padding: 0;
+
+  @media (min-width: @tablet-width) {
+    order: 3;
+    width: 100%;
+    text-align: left;
+  }
 }
 
 .post__likes-count {
@@ -46,4 +84,47 @@
   line-height: 24px;
   text-transform: uppercase;
   color: @font-red;
+
+  @media (min-width: @tablet-width) {
+    position: absolute;
+    bottom: 23px;
+  }
+}
+
+.post--of-the-day {
+  position: relative;
+  width: 100%;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 50px;
+
+    .post__info {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-start;
+      padding-top: 15px;
+      min-height: 0;
+      position: relative;
+    }
+
+    .post__author {
+      order: 0;
+    }
+
+    .post__time {
+      order: 1;
+    }
+
+    .post__text {
+      order: 3;
+      width: 100%;
+    }
+
+    .post__likes-count {
+      order: 2;
+      position: absolute;
+      right: 45px;
+      top: 15px;
+    }
+  }
 }

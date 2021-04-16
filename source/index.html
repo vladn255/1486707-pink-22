@@ -3,22 +3,23 @@
 
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>HTML Academy: Пинк</title>
   <link href="css/style.css" rel="stylesheet">
 </head>
 
 <body class="page">
   <header class="page-header">
-    <div class="page-header-logo">
-      <a class="page-header-logo__link" href="index.html">
-        Pink
-      </a>
-      <button class="page-header-logo__toggle" type="button">
-        <span class="visually-hidden">Открыть меню</span>
-        <span class="visually-hidden">Закрыть меню</span>
-      </button>
-    </div>
     <nav class="main-nav">
+      <div class="page-header-logo">
+        <a class="page-header-logo__link" href="index.html">
+          Pink
+        </a>
+        <button class="page-header-logo__toggle" type="button">
+          <span class="visually-hidden">Открыть меню</span>
+          <span class="visually-hidden">Закрыть меню</span>
+        </button>
+      </div>
       <div class="main-nav__wrapper">
         <ul class="main-nav__list site-list">
           <li class="site-list__item site-list__item--active">
@@ -48,36 +49,40 @@
 
   <main class="page-main">
     <section class="banner banner--index">
-      <h1 class="banner__text page-title page-title--white">
-        Взгляните на жизнь иначе!
-      </h1>
-      <div class="download-info">
-        <a class="download-info__link button" href="#">
-          Скачать приложение
-        </a>
-        <ul class="download-info__platforms-list">
-          <li class="download-info__platforms-item">
-            <a class="download-info__platforms-link" href="#">
-              <img src="https://via.placeholder.com/150x150" class="download-info__img" alt="apple picture">
-            </a>
-          </li>
-          <li class="download-info__platforms-item">
-            <a class="download-info__platforms-link" href="#">
-              <img src="https://via.placeholder.com/150x150" class="download-info__img" alt="android picture">
-            </a>
-          </li>
-          <li class="download-info__platforms-item">
-            <a class="download-info__platforms-link" href="#">
-              <img src="https://via.placeholder.com/150x150" class="download-info__img" alt="microsoft picture">
-            </a>
-          </li>
-        </ul>
-        <p class="download-info__explanation">
-          Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8
-        </p>
+      <div class="banner__wrapper container">
+        <h1 class="banner__text page-title page-title--white page-title--index">
+          Взгляните на жизнь иначе!
+        </h1>
+        <img class="banner__image" src="https://via.placeholder.com/150x150" width="320" height="286"
+          alt="hand holding a phone with a pink picture on it">
+        <div class="download-info">
+          <a class="download-info__link button" href="#">
+            Скачать приложение
+          </a>
+          <ul class="download-info__platforms-list">
+            <li class="download-info__platforms-item">
+              <a class="download-info__platforms-link" href="#">
+                <img src="https://via.placeholder.com/150x150" class="download-info__img" alt="apple picture">
+              </a>
+            </li>
+            <li class="download-info__platforms-item">
+              <a class="download-info__platforms-link" href="#">
+                <img src="https://via.placeholder.com/150x150" class="download-info__img" alt="android picture">
+              </a>
+            </li>
+            <li class="download-info__platforms-item">
+              <a class="download-info__platforms-link" href="#">
+                <img src="https://via.placeholder.com/150x150" class="download-info__img" alt="microsoft picture">
+              </a>
+            </li>
+          </ul>
+          <p class="download-info__explanation">
+            Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8
+          </p>
+        </div>
       </div>
     </section>
-    <div class="slogan">
+    <div class="slogan container">
       <p class="page-title">
         Устали от серости мегаполиса?
       </p>
@@ -87,8 +92,10 @@
     </div>
     <section class="features">
       <h2 class="visually-hidden">Особенности</h2>
-      <ul class="features__list">
+      <ul class="features__list container">
         <li class="features__item">
+          <img class="features__img features__img--desktop" src="https://via.placeholder.com/150x150" width="157"
+            height="320" alt="iphone screen with grey trash-bins">
           <h3 class="features__title">
             Поднимает настроение
           </h3>
@@ -97,6 +104,8 @@
           </p>
         </li>
         <li>
+          <img class="features__img features__img--desktop" src="https://via.placeholder.com/150x150" width="157"
+            height="320" alt="iphone screen with pink trash-bins">
           <h3 class="features__title">
             Меняет мир вокруг
           </h3>
@@ -105,6 +114,8 @@
           </p>
         </li>
         <li>
+          <img class="features__img features__img--desktop" src="https://via.placeholder.com/150x150" width="157"
+            height="320" alt="iphone screen with a smiley face">
           <h3 class="features__title">
             Заводит новых друзей
           </h3>
@@ -115,9 +126,24 @@
       </ul>
     </section>
 
-    <div class="reviews">
-      <div class="slider">
-        <blockquote class="slider__item">
+    <section class="research">
+      <img class="research__image" src="https://via.placeholder.com/150x150" width="238" height="276"
+        alt="stopwatch with number 24 in it">
+      <div class="research__wrapper">
+        <h2 class="research__title">
+          Эффект <br class="research__break">на 24 часа!
+        </h2>
+        <p class="research__text">
+          Британские ученые провели исследования и доказали, что положительный эффект от использования приложения длится
+          целые сутки!
+        </p>
+        <a class="research__link" href="#">Узнать больше об исследовании</a>
+      </div>
+    </section>
+
+    <div class="reviews container">
+      <div class="slider slider--reviews">
+        <blockquote class="slider__item reviews__item">
           <cite class="reviews__author">
             Николай Петров
           </cite>
@@ -125,6 +151,7 @@
             «Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я
             познакомился со своей будущей женой в комментариях к выложенной фотографии!»
           </p>
+          <span class="reviews__author-bio">25 лет, водитель трамвая</span>
         </blockquote>
         <div class="slider__toggles">
           <button class="slider__toggle slider__toggle--current" type="button"></button>
@@ -135,13 +162,24 @@
     </div>
 
     <div class="payment-plans">
-      <div class="slider slider--table">
+      <div class="slider slider--table container">
         <table class="payment-plans__table table">
           <thead>
             <tr class="table__headline">
+              <th class="table__data table__data--hidden">
+              </th>
+              <th class="table__data table__data--headline">
+                <span class="payment-plans__category">База</span>
+                <span class="payment-plans__price">1,99 USD</span>
+              </th>
               <th class="table__data table__data--headline">
                 <span class="payment-plans__hit">Хит</span>
-                <h2 class="payment-plans__category">Стандарт</h2>
+                <span class="payment-plans__category">Стандарт</span>
+                <span class="payment-plans__price">3,99 USD</span>
+              </th>
+              <th class="table__data table__data--headline">
+                <span class="payment-plans__category">Анлим</span>
+                <span class="payment-plans__price">9,99 USD</span>
               </th>
             </tr>
           </thead>
@@ -152,10 +190,18 @@
               </td>
               <td class="table__data table__data--yes">
               </td>
+              <td class="table__data table__data--yes">
+              </td>
+              <td class="table__data table__data--yes">
+              </td>
             </tr>
             <tr class="table__row">
               <td class="table__data table__data--desc">
                 Смайлики
+              </td>
+              <td class="table__data table__data-no">
+              </td>
+              <td class="table__data table__data--yes">
               </td>
               <td class="table__data table__data--yes">
               </td>
@@ -165,6 +211,10 @@
                 Комментарии
               </td>
               <td class="table__data table__data--no">
+              </td>
+              <td class="table__data table__data--no">
+              </td>
+              <td class="table__data table__data--yes">
               </td>
             </tr>
           </tbody>
@@ -177,8 +227,8 @@
       </div>
     </div>
 
-    <section class="contacts">
-      <div class="contacts-text">
+    <section class="contacts container">
+      <div class="contacts-intro">
         <h3 class="page-title">
           Остались вопросы?
         </h3>
@@ -186,7 +236,7 @@
           Свяжитесь с нами!
         </h3>
       </div>
-      <div class="contacts__container">
+      <div class="contacts__container contacts__container--first">
         <h4 class="contacts__title">Звоните:</h4>
         <a class="contacts__text" href="tel:+78125556666">+7 (812) 555-66-66</a>
       </div>
@@ -194,7 +244,7 @@
         <h4 class="contacts__title">Пишите:</h4>
         <a class="contacts__text" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
       </div>
-      <div class="contacts__container">
+      <div class="contacts__container contacts__container--first">
         <h4 class="contacts__title">Приезжайте в гости:</h4>
         <address class="contacts__text">ул. Большая<br>Конюшенная, 19/8</address>
       </div>
@@ -204,7 +254,7 @@
     </section>
   </main>
 
-  <footer class="page-footer">
+  <footer class="page-footer container">
     <a class="page-footer__logo">
       Pink
     </a>

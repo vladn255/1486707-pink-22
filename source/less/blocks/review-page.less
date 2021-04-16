@@ -1,0 +1,45 @@
+.review-page {
+  @media (min-width: @tablet-width) {
+    padding-top: 51px;
+  }
+}
+
+.review-page__user-desc {
+  text-align: center;
+  padding: 0;
+  padding-top: 42px;
+  margin: 0;
+  position: relative;
+
+  @media (max-width: @mobile-width) {
+    margin-bottom: 52px;
+    border: 0;
+  }
+
+  @media (min-width: @tablet-width) {
+    order: 5;
+    border: 2px solid @bg-lightgrey;
+    padding-left: 82px;
+    padding-right: 82px;
+    margin-bottom: 70px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 100%;
+  }
+}
+
+.review-page__user-contacts {
+  @media (min-width: @tablet-width) {
+    order: 3;
+    padding-left: 20px;
+    padding-right: 50px;
+    padding-top: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+  }
+}

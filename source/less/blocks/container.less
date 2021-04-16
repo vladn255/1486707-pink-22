@@ -1,0 +1,38 @@
+.container {
+  padding-left: 20px;
+  padding-right: 20px;
+  min-width: 280px;
+  max-width: 960px;
+  box-sizing: border-box;
+
+  @media (min-width: @desktop-width) {
+    margin: auto;
+  }
+}
+
+.contacts__map-wrapper {
+  width: 100%;
+}
+
+.contacts__title {
+  line-height: 25px;
+  margin: 0;
+  padding: 0;
+
+  @media (min-width: @desktop-width) {
+    padding-bottom: 20px;
+  }
+}
+
+.contacts__text {
+  font-size: 24px;
+  line-height: 33px;
+  color: @font-red;
+  font-style: normal;
+}
+
+.contacts__container--first {
+  @media (min-width: @desktop-width) {
+    order: -2;
+  }
+}

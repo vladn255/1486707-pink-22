@@ -1,5 +1,16 @@
 .payment-plans {
   text-transform: uppercase;
+  background-color: @bg-lightgrey;
+
+  @media (min-width: @tablet-width) {
+    padding-top: 70px;
+    padding-bottom: 70px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 107px;
+    padding-bottom: 95px;
+  }
 }
 
 .payment-plans__hit {
@@ -22,8 +33,12 @@
   text-align: center;
 
   margin: 0;
-  margin-bottom: 15px;
   padding: 0;
+
+  @media (min-width: @desktop-width) {
+    @fs-title: 18px;
+    line-height: 30px;
+  }
 }
 
 .payment-plans__price {
@@ -33,4 +48,9 @@
 
   margin: 0;
   padding: 0;
+
+  @media (min-width: @desktop-width) {
+    font-size: 24px;
+    line-height: 30px;
+  }
 }

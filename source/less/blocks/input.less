@@ -1,7 +1,22 @@
+.input {
+  margin-bottom: 20px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 50px;
+  }
+}
+
 .input__label {
   font-size: @fs-base;
   color: @font-red;
   text-transform: uppercase;
+  display: block;
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    align-items: baseline;
+    margin-left: -25px;
+  }
 }
 
 .input__field {
@@ -12,8 +27,35 @@
 
   padding-left: 20px;
   min-height: 59px;
+
+  @media (max-width: @mobile-width) {
+    display: block;
+    width: 100%;
+  }
+
+  @media (min-width: @tablet-width) {
+    display: inline-block;
+    margin-left: 20px;
+    flex-grow: 1;
+  }
 }
 
 .input__field::placeholder {
   color: @font-black;
+}
+
+.input__field--textarea {
+  min-height: 197px;
+  display: inline-block;
+  margin: 0;
+
+  @media (min-width: @tablet-width) {
+    min-width: 276px;
+  }
+}
+
+.input__label--mobile {
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
 }

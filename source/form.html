@@ -3,26 +3,27 @@
 
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>HTML Academy: Пинк</title>
   <link href="css/style.css" rel="stylesheet">
 </head>
 
 <body class="page">
   <header class="page-header">
-    <div class="page-header-logo">
-      <a class="page-header-logo__link" href="index.html">
-        Pink
-      </a>
-      <button class="page-header-logo__toggle" type="button">
-        <span class="visually-hidden">Открыть меню</span>
-        <span class="visually-hidden">Закрыть меню</span>
-      </button>
-    </div>
     <nav class="main-nav">
+      <div class="page-header-logo">
+        <a class="page-header-logo__link" href="index.html">
+          Pink
+        </a>
+        <button class="page-header-logo__toggle" type="button">
+          <span class="visually-hidden">Открыть меню</span>
+          <span class="visually-hidden">Закрыть меню</span>
+        </button>
+      </div>
       <div class="main-nav__wrapper">
         <ul class="main-nav__list site-list">
-          <li class="site-list__item">
-            <a class="site-list__link" href="index.html">
+          <li class="site-list__item site-list__item--active">
+            <a class="site-list__link">
               Главная
             </a>
           </li>
@@ -31,8 +32,8 @@
               Фотографии
             </a>
           </li>
-          <li class="site-list__item site-list__item--active">
-            <a class="site-list__link">
+          <li class="site-list__item">
+            <a class="site-list__link" href="form.html">
               Конкурс
             </a>
           </li>
@@ -48,18 +49,19 @@
 
   <main class="page-main">
     <div class="banner">
-      <h1 class="banner__text page-title page-title--white">
+      <h1 class="banner__text page-title page-title--white container">
         Конкурс на самое безбашенное путешествие с Пинк
       </h1>
     </div>
 
-    <section class="review-page">
+    <section class="review-page container">
       <h2 class="visually-hidden">Form credentials</h2>
-      <form class="form" action="https://echo.htmlacademy.ru" method="post">
+      <form class="form container" action="https://echo.htmlacademy.ru" method="post">
         <p class="form__intro">
           Поделитесь своей историей и получите шанс выиграть ценный приз - 1000 миль на вашу бонусную карту!
+          <span class="form__not-mobile">Пожалуйста, заполните форму ниже:</span>
         </p>
-        <fieldset class="form__fieldset">
+        <fieldset class="form__fieldset form__fieldset--name form__fieldset--no-border">
           <div class="form-input input">
             <input class="input__field" type="text" id="surname" name="surname" placeholder="Укажите фамилию*" required>
             <label class="input__label" for="surname">Фамилия:</label>
@@ -71,12 +73,13 @@
           </div>
 
           <div class="form-input input">
-            <input class="input__field" type="text" id="fathers-name" name="fathers-name" placeholder="Ну и отчество тоже">
+            <input class="input__field" type="text" id="fathers-name" name="fathers-name"
+              placeholder="Ну и отчество тоже">
             <label class="input__label" for="fathers-name">Отчество:</label>
           </div>
         </fieldset>
 
-        <fieldset class="form__fieldset form__fieldset--gray">
+        <fieldset class="form__fieldset form__fieldset--adventures form__fieldset--grey">
           <p class="form__legend">
             Ваши безбашенные достижения в путешествии
           </p>
@@ -133,19 +136,19 @@
 
         <fieldset class="review-page__user-contacts form__fieldset">
           <div class="form-input input">
-            <input class="input__field" type="tel" id="phone" value="phone" placeholder="Номер, пожалуйста">
+            <input class="input__field" type="tel" id="phone" placeholder="Номер, пожалуйста">
             <label class="input__label" for="phone">
               Номер телефона</label>
           </div>
 
           <div class="form-input input">
-            <input class="input__field" type="email" id="email" value="email" placeholder="Введите почту*" required>
+            <input class="input__field" type="email" id="email" placeholder="Введите почту*" required>
             <label class="input__label" for="email">
               Адрес почты</label>
           </div>
         </fieldset>
 
-        <fieldset class="form__fieldset form__fieldset--gray">
+        <fieldset class="form__fieldset form__fieldset--app form__fieldset--grey">
           <p class="form__legend">
             С каким приложением путешествовали?
           </p>
@@ -169,15 +172,17 @@
 
         <div class="review-page__user-desc input">
           <label for="user-desc" class="input__label">Опишите свои эмоции</label>
-          <textarea class="input-textarea" id="user-desc">Можно прям в красках, не стесняясь в выражениях</textarea>
+          <textarea class="input-textarea" id="user-desc" placeholder="Можно прям в красках, не стесняясь в выражениях"></textarea>
         </div>
-        <button class="button button--submit" type="submit">Отправить форму</button>
-        <span class="form__intro form__intro--required">- Обязательные поля</span>
+        <div class="form__submit-wrapper">
+          <button class="button button--submit" type="submit">Отправить форму</button>
+          <span class="form__intro form__intro--required">- Обязательные поля</span>
+        </div>
       </form>
     </section>
   </main>
 
-  <footer class="page-footer">
+  <footer class="page-footer container">
     <a class="page-footer__logo">
       Pink
     </a>
