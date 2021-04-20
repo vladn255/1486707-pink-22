@@ -7,6 +7,9 @@ body {
   font-size: @fs-title;
   line-height: 30px;
   font-family: @font-family;
+
+  display: grid;
+  grid-template-rows: min-content 1fr min-content;
 }
 
 img {
@@ -29,4 +32,8 @@ a {
   clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
 }

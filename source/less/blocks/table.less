@@ -2,8 +2,8 @@
   border-collapse: collapse;
 
   @media (max-width: @mobile-width) {
-    width: 335%;
-    margin-left: -520px;
+    width: calc(@width-default * 4);
+    transform: translate(-50%);
     margin-bottom: 45px;
   }
 
@@ -14,13 +14,12 @@
 
 .table__data {
   font-size: @fs-base;
-  text-transform: uppercase;
   background-color: @bg-white;
   border: 2px solid @bg-lightgrey;
   box-sizing: border-box;
 
   @media (max-width: @mobile-width) {
-    width: 280px;
+    width: @width-default;
   }
 
   @media (min-width: @tablet-width) {
@@ -37,6 +36,10 @@
 .table__headline {
   background-color: @bg-darkgrey;
   color: @font-white;
+}
+
+.table__text {
+  padding-left: 20px;
 }
 
 .table__data--desc {
@@ -79,4 +82,12 @@
 .table__data--hidden {
   background-color: @bg-lightgrey;
   opacity: 1;
+}
+
+.table__text--hidden {
+  text-transform: uppercase;
+
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
 }
