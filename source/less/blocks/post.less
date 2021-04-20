@@ -2,13 +2,8 @@
   background-color: @bg-lightgrey;
 
   @media (min-width: @tablet-width) {
-    width: 50%;
+    width: 300px;
     position: relative;
-    margin-bottom: 22px;
-  }
-
-  @media (min-width: @desktop-width) {
-    width: 30%;
   }
 }
 
@@ -94,6 +89,8 @@
 .post--of-the-day {
   position: relative;
   width: 100%;
+  grid-column-start: 1;
+  grid-column-end: 3;
 
   @media (min-width: @tablet-width) {
     margin-bottom: 50px;
@@ -127,5 +124,9 @@
       right: 45px;
       top: 15px;
     }
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-column-end: 4;
   }
 }
