@@ -1,8 +1,8 @@
 .table {
   border-collapse: collapse;
 
-  @media (max-width: @mobile-width) {
-    width: calc(@width-default * 4);
+  @media (max-width: calc(@tablet-width - 1px)) {
+    width: calc(@width-default-m * 4);
     transform: translate(-50%);
     margin-bottom: 45px;
   }
@@ -18,10 +18,6 @@
   border: 2px solid @bg-lightgrey;
   box-sizing: border-box;
 
-  @media (max-width: @mobile-width) {
-    width: @width-default;
-  }
-
   @media (min-width: @tablet-width) {
     min-width: 152px;
     text-transform: none;
@@ -29,7 +25,7 @@
   }
 
   @media (min-width: @desktop-width) {
-    min-width: 233px;
+    min-width: 252px;
   }
 }
 
@@ -71,12 +67,9 @@
   padding-bottom: 35px;
   text-transform: uppercase;
 
-  @media (min-width: @tablet-width) {
-    padding-top: 13px;
-    padding-bottom: 20px;
-    padding-left: 65px;
-    padding-right: 63px;
-  }
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .table__data--hidden {
@@ -88,6 +81,6 @@
   text-transform: uppercase;
 
   @media (min-width: @tablet-width) {
-    display: none;
+    .visually-hidden;
   }
 }

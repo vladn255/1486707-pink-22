@@ -11,11 +11,11 @@
 <body class="page">
   <header class="page-header">
     <nav class="main-nav">
-      <div class="page-header-logo">
-        <a class="page-header-logo__link" href="index.html">
+      <div class="page-header__logo">
+        <a class="page-header__logo-link" href="index.html">
           Pink
         </a>
-        <button class="page-header-logo__toggle" type="button">
+        <button class="page-header__logo-toggle" type="button">
           <span class="visually-hidden">Открыть меню</span>
           <span class="visually-hidden">Закрыть меню</span>
         </button>
@@ -23,7 +23,7 @@
       <div class="main-nav__wrapper">
         <ul class="main-nav__list site-list">
           <li class="site-list__item site-list__item--active">
-            <a class="site-list__link">
+            <a class="site-list__link" href="index.html">
               Главная
             </a>
           </li>
@@ -33,7 +33,7 @@
             </a>
           </li>
           <li class="site-list__item">
-            <a class="site-list__link" href="form.html">
+            <a class="site-list__link">
               Конкурс
             </a>
           </li>
@@ -54,7 +54,7 @@
       </h1>
     </div>
 
-    <section class="review-page container">
+    <section class="review-page">
       <h2 class="visually-hidden">Form credentials</h2>
       <form class="form container" action="https://echo.htmlacademy.ru" method="post">
         <p class="form__intro">
@@ -84,57 +84,57 @@
             Ваши безбашенные достижения в путешествии
           </p>
           <ul class="form__list">
-            <li class="form__item">
-              <input class="checkbox__input" type="checkbox" id="shark-selfie" value="shark-selfie" checked>
-              <label class="checkbox" for="shark-selfie">
-                <span class="checkbox__icon"></span>
+            <li class="form__item input">
+              <input class="input__field input__field--checkbox" type="checkbox" id="shark-selfie" value="shark-selfie" checked>
+              <label class="input__label input__label--checkbox" for="shark-selfie">
+                <span class="input__icon"></span>
                 Сделал селфи с акулой
               </label>
             </li>
 
-            <li class="form__item">
-              <input class="checkbox__input" type="checkbox" id="beach-sunburn" value="beach-sunburn" checked>
-              <label class="checkbox" for="beach-sunburn">
-                <span class="checkbox__icon"></span>
+            <li class="form__item input">
+              <input class="input__field input__field--checkbox" type="checkbox" id="beach-sunburn" value="beach-sunburn" checked>
+              <label class="input__label input__label--checkbox" for="beach-sunburn">
+                <span class="input__icon"></span>
                 Обгорел на пляже
               </label>
             </li>
 
-            <li class="form__item">
-              <input class="checkbox__input" type="checkbox" id="chuck-norris-witnessed" value="chuck-norris-witnessed">
-              <label class="checkbox" for="chuck-norris-witnessed">
-                <span class="checkbox__icon"></span>
+            <li class="form__item input">
+              <input class="input__field input__field--checkbox" type="checkbox" id="chuck-norris-witnessed" value="chuck-norris-witnessed">
+              <label class="input__label input__label--checkbox" for="chuck-norris-witnessed">
+                <span class="input__icon"></span>
                 Видел Чака Норриса
               </label>
             </li>
 
-            <li class="form__item">
-              <input class="checkbox__input" type="checkbox" id="bought-souvenirs" value="bought-souvenirs">
-              <label class="checkbox" for="bought-souvenirs">
-                <span class="checkbox__icon"></span>
+            <li class="form__item input">
+              <input class="input__field input__field--checkbox" type="checkbox" id="bought-souvenirs" value="bought-souvenirs">
+              <label class="input__label input__label--checkbox" for="bought-souvenirs">
+                <span class="input__icon"></span>
                 Накупил сувениров
               </label>
             </li>
 
-            <li class="form__item">
-              <input class="checkbox__input" type="checkbox" id="tower-holding" value="tower-holding" checked>
-              <label class="checkbox" for="tower-holding">
-                <span class="checkbox__icon"></span>
+            <li class="form__item input">
+              <input class="input__field input__field--checkbox" type="checkbox" id="tower-holding" value="tower-holding" checked>
+              <label class="input__label input__label--checkbox" for="tower-holding">
+                <span class="input__icon"></span>
                 Удержал башню
               </label>
             </li>
 
-            <li class="form__item">
-              <input class="checkbox__input" type="checkbox" id="hotel-trashed" value="hotel-trashed">
-              <label class="checkbox" for="hotel-trashed">
-                <span class="checkbox__icon"></span>
+            <li class="form__item input">
+              <input class="input__field input__field--checkbox" type="checkbox" id="hotel-trashed" value="hotel-trashed">
+              <label class="input__label input__label--checkbox" for="hotel-trashed">
+                <span class="input__icon"></span>
                 Разгромил отель
               </label>
             </li>
           </ul>
         </fieldset>
 
-        <fieldset class="review-page__user-contacts form__fieldset">
+        <fieldset class="form__fieldset form__fieldset--contacts">
           <div class="form-input input">
             <input class="input__field" type="tel" id="phone" placeholder="Номер, пожалуйста">
             <label class="input__label" for="phone">
@@ -153,30 +153,32 @@
             С каким приложением путешествовали?
           </p>
           <ul class="form__list">
-            <li class="form__item">
-              <input class="radio__input" type="radio" id="ios_pink" value="ios_pink" checked>
-              <label class="radio" for="ios_pink">Pink для iOS</label>
+            <li class="form__item input">
+              <input class="input__radio" type="radio" id="ios_pink" value="ios_pink" checked>
+              <label class="input__label input__label--radio" for="ios_pink">Pink для iOS</label>
             </li>
 
-            <li class="form__item">
-              <input class="radio__input" type="radio" id="android_pink" value="android_pink">
-              <label class="radio" for="android_pink">Pink на Android</label>
+            <li class="form__item input">
+              <input class="input__radio" type="radio" id="android_pink" value="android_pink">
+              <label class="input__label input__label--radio" for="android_pink">Pink на Android</label>
             </li>
 
-            <li class="form__item">
-              <input class="radio__input" type="radio" id="windows_phone" value="windows_phone">
-              <label class="radio" for="windows_phone">Windows Phone</label>
+            <li class="form__item input">
+              <input class="input__radio" type="radio" id="windows_phone" value="windows_phone">
+              <label class="input__label input__label--radio" for="windows_phone">Windows Phone</label>
             </li>
           </ul>
         </fieldset>
 
-        <div class="review-page__user-desc input">
+        <div class="form__textarea input">
           <label for="user-desc" class="input__label">Опишите свои эмоции</label>
-          <textarea class="input-textarea" id="user-desc" rows="6" placeholder="Можно прям в красках, не стесняясь в выражениях"></textarea>
+          <textarea class="input__textarea" id="user-desc" rows="6"
+            placeholder="Можно прям в красках, не стесняясь в выражениях"></textarea>
         </div>
         <div class="form__submit-wrapper">
           <button class="button button--submit" type="submit">Отправить форму</button>
-          <span class="form__intro form__intro--required">- Обязательные поля</span>
+          <span class="form__intro form__intro--required-t">- Обязательные<span
+              class="form__intro form__intro--required-d"> для заполнения</span> поля</span>
         </div>
       </form>
     </section>

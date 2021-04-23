@@ -1,7 +1,14 @@
 .container {
   padding-left: @padding-lr-default;
   padding-right: @padding-lr-default;
-  min-width: @width-default;
-  max-width: @max-width-default;
+  width: @width-default-m;
   margin: auto;
+
+  @media (min-width: @tablet-width) {
+    width: @width-default-t;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: @width-default-d;
+  }
 }

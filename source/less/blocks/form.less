@@ -4,17 +4,32 @@
   @media (min-width: @tablet-width) {
     display: grid;
     justify-items: stretch;
-    grid-auto-flow: row;
-    grid-auto-rows: auto;
     grid-template-columns: 1fr;
-
     grid-row-gap: 70px;
+
+    grid-template-areas:
+      "intro"
+      "personal"
+      "app"
+      "contacts"
+      "adventures"
+      "review"
+      "textarea"
+      "submit-button";
   }
 
   @media (min-width: @desktop-width) {
-    display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 74px;
+    grid-row-gap: 74px;
+
+    grid-template-areas:
+      "intro intro"
+      "personal app"
+      "contacts contacts"
+      "adventures adventures"
+      "review review"
+      "textarea textarea"
+      "submit-button submit-button";
   }
 }
 
@@ -28,11 +43,8 @@
     line-height: 30px;
     padding-left: 20px;
     padding-right: 20px;
-  }
 
-  @media (min-width: @desktop-width) {
-    grid-column-start: 1;
-    grid-column-end: 3;
+    grid-area: intro;
   }
 }
 
@@ -45,7 +57,7 @@
 
 .form__not-mobile {
   @media (max-width: @mobile-width) {
-    display: none;
+    .visually-hidden;
   }
 }
 
@@ -115,18 +127,45 @@
     justify-content: space-between;
     align-items: baseline;
     order: 6;
+
+    grid-area: submit-button;
   }
 
   @media (min-width: @desktop-width) {
     width: 100%;
+  }
+}
 
-    grid-column-start: 1;
-    grid-column-end: 3;
+.form__textarea {
+  text-align: center;
+  padding: 0;
+  padding-top: 42px;
+  margin: 0;
+  position: relative;
+
+  @media (max-width: @mobile-width) {
+    margin-bottom: 52px;
+    border: 0;
+  }
+
+  @media (min-width: @tablet-width) {
+    order: 5;
+    border: 2px solid @bg-lightgrey;
+    padding-left: 82px;
+    padding-right: 82px;
+    margin-bottom: 70px;
+
+    grid-area: textarea;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 100%;
   }
 }
 
 .form--editor {
   margin-bottom: 41px;
+  display: block;
 
   @media (min-width: @tablet-width) {
     width: 50%;
@@ -142,9 +181,7 @@
 }
 
 .form__fieldset--grey {
-  @media (max-width: @mobile-width) {
-    background-color: @bg-lightgrey;
-  }
+  background-color: @bg-lightgrey;
 
   @media (min-width: @tablet-width) {
     background-color: @bg-white;
@@ -155,11 +192,7 @@
   @media (min-width: @tablet-width) {
     width: 100%;
     order: 4;
-  }
-
-  @media (min-width: @desktop-width) {
-    grid-column-start: 1;
-    grid-column-end: 3;
+    grid-area: adventures;
   }
 }
 
@@ -170,6 +203,7 @@
 .form__fieldset--name {
   @media (min-width: @tablet-width) {
     order: 1;
+    grid-area: personal;
   }
 
   @media (min-width: @desktop-width) {
@@ -183,6 +217,7 @@
     order: 2;
     padding-top: 8px;
     padding-left: 73px;
+    grid-area: app;
   }
 
   @media (min-width: @desktop-width) {
@@ -190,9 +225,35 @@
   }
 }
 
-.form__intro--required {
+.form__fieldset--contacts {
+  @media (min-width: @tablet-width) {
+    order: 3;
+    padding-left: 20px;
+    padding-right: 50px;
+    padding-top: 0;
+    grid-area: contacts;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 100%;
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    flex-wrap: wrap;
+  }
+}
+
+.form__intro--required-t {
   text-transform: uppercase;
   display: block;
+}
+
+.form__intro--required-d {
+  padding-left: 0px;
+  padding-right: 0px;
+  @media (max-width: calc(@desktop-width - 1px)) {
+    .visually-hidden;
+  }
 }
 
 .form__item--radio {
