@@ -1,10 +1,31 @@
 .page-header {
   background-color: @bg-darkgrey;
-  padding-left: 20px;
-  padding-top: 22px;
 }
 
-.page-header-logo__link {
+.page-header__logo {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  padding-left: 20px;
+  padding-right: 20px;
+
+  @media (max-width: @mobile-width) {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+
+  @media (min-width: @tablet-width) {
+    padding-top: 43px;
+    padding-bottom: 43px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-right: 225px;
+  }
+}
+
+.page-header__logo-link {
   text-transform: uppercase;
   color: @font-white;
   font-weight: bold;
