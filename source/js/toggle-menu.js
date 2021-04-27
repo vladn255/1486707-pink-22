@@ -21,5 +21,3 @@ const handleClickToggleMenu = () => {
 navMain.classList.remove('main-nav--nojs');
 
 navToggle.addEventListener('click', handleClickToggleMenu);
-
-
