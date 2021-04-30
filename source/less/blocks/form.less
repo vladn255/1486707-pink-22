@@ -35,7 +35,6 @@
 
 .form__intro {
   font-size: @fs-base;
-  margin: 0;
   text-align: center;
 
   @media (min-width: @tablet-width) {
@@ -72,7 +71,6 @@
 
   @media (max-width: @mobile-width) {
     position: relative;
-    top: 60px;
   }
 
   @media (min-width: @tablet-width) {
@@ -112,6 +110,7 @@
   padding-bottom: 0;
   margin: 0;
   border: 0;
+  .container;
 
   @media (min-width: @tablet-width) {
     border: 2px solid @bg-lightgrey;
@@ -181,10 +180,19 @@
 }
 
 .form__fieldset--grey {
-  background-color: @bg-lightgrey;
+  @media (max-width: @mobile-width) {
+    background-color: @bg-lightgrey;
+    margin: 0;
+    padding-left: 0;
+    padding-right: 0;
+    width: 100%;
+  }
+}
 
-  @media (min-width: @tablet-width) {
-    background-color: @bg-white;
+.form__fieldset--grey .form__legend,
+.form__fieldset--grey .form__list {
+  @media (max-width: @mobile-width) {
+    .container;
   }
 }
 

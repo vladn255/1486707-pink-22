@@ -1,4 +1,5 @@
-.main-nav {
+.main-nav,
+.main-nav--nojs {
   @media (min-width: @desktop-width) {
     display: flex;
     flex-direction: row;
@@ -7,4 +8,20 @@
     max-width: 960px;
     margin: auto;
   }
+}
+
+.main-nav .main-nav__wrapper {
+  @media (max-width: @desktop-width) {
+    display: none;
+  }
+}
+
+.main-nav--opened .main-nav__wrapper {
+  @media (max-width: @desktop-width) {
+    display: block;
+  }
+}
+
+.main-nav--nojs .page-header__logo-toggle {
+  display: none;
 }
