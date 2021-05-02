@@ -13,7 +13,11 @@
     <nav class="main-nav main-nav--nojs">
       <div class="page-header__logo">
         <a class="page-header__logo-link" href="index.html">
-          Pink
+          <picture class="page-header__logo-image">
+            <source media="(min-width: 960px)" srcset="img/logo-pink-white-desktop.svg">
+            <source media="(min-width: 660px)" srcset="img/logo-pink-white-tablet.svg">
+            <img src="img/logo-pink-white-mobile.svg" alt="Pink logo">
+          </picture>
         </a>
         <button class="page-header__logo-toggle" type="button">
           <div>
@@ -87,7 +91,8 @@
           </p>
           <ul class="form__list">
             <li class="form__item input">
-              <input class="input__field input__field--checkbox visually-hidden" type="checkbox" id="shark-selfie" value="shark-selfie" checked>
+              <input class="input__field input__field--checkbox visually-hidden" type="checkbox" id="shark-selfie"
+                value="shark-selfie" checked>
               <label class="input__label input__label--checkbox" for="shark-selfie">
                 <span class="input__icon"></span>
                 Сделал селфи с акулой
@@ -95,7 +100,8 @@
             </li>
 
             <li class="form__item input">
-              <input class="input__field input__field--checkbox visually-hidden" type="checkbox" id="beach-sunburn" value="beach-sunburn" checked>
+              <input class="input__field input__field--checkbox visually-hidden" type="checkbox" id="beach-sunburn"
+                value="beach-sunburn" checked>
               <label class="input__label input__label--checkbox" for="beach-sunburn">
                 <span class="input__icon"></span>
                 Обгорел на пляже
@@ -103,7 +109,8 @@
             </li>
 
             <li class="form__item input">
-              <input class="input__field input__field--checkbox visually-hidden" type="checkbox" id="chuck-norris-witnessed" value="chuck-norris-witnessed">
+              <input class="input__field input__field--checkbox visually-hidden" type="checkbox"
+                id="chuck-norris-witnessed" value="chuck-norris-witnessed">
               <label class="input__label input__label--checkbox" for="chuck-norris-witnessed">
                 <span class="input__icon"></span>
                 Видел Чака Норриса
@@ -111,7 +118,8 @@
             </li>
 
             <li class="form__item input">
-              <input class="input__field input__field--checkbox visually-hidden" type="checkbox" id="bought-souvenirs" value="bought-souvenirs">
+              <input class="input__field input__field--checkbox visually-hidden" type="checkbox" id="bought-souvenirs"
+                value="bought-souvenirs">
               <label class="input__label input__label--checkbox" for="bought-souvenirs">
                 <span class="input__icon"></span>
                 Накупил сувениров
@@ -119,7 +127,8 @@
             </li>
 
             <li class="form__item input">
-              <input class="input__field input__field--checkbox visually-hidden" type="checkbox" id="tower-holding" value="tower-holding" checked>
+              <input class="input__field input__field--checkbox visually-hidden" type="checkbox" id="tower-holding"
+                value="tower-holding" checked>
               <label class="input__label input__label--checkbox" for="tower-holding">
                 <span class="input__icon"></span>
                 Удержал башню
@@ -127,7 +136,8 @@
             </li>
 
             <li class="form__item input">
-              <input class="input__field input__field--checkbox visually-hidden" type="checkbox" id="hotel-trashed" value="hotel-trashed">
+              <input class="input__field input__field--checkbox visually-hidden" type="checkbox" id="hotel-trashed"
+                value="hotel-trashed">
               <label class="input__label input__label--checkbox" for="hotel-trashed">
                 <span class="input__icon"></span>
                 Разгромил отель
@@ -188,22 +198,33 @@
 
   <footer class="page-footer container">
     <a class="page-footer__logo">
-      Pink
+      <picture class="page-footer__logo-image">
+        <source media="(min-width: 960px)" srcset="img/logo-pink-blue-desktop.svg">
+        <img src="img/logo-pink-blue-mobile.svg" alt="Pink logo">
+      </picture>
     </a>
     <ul class="socials">
       <li class="socials__item">
-        <a class="socials__link socials__link--twitter" href="#"></a>
+        <a class="socials__link socials__link--twitter" href="#">
+          <img src="img/icon-twitter.svg" alt="twitter icon">
+        </a>
       </li>
       <li class="socials__item">
-        <a class="socials__link socials__link--facebook" href="#"></a>
+        <a class="socials__link socials__link--facebook" href="#">
+          <img src="img/icon-facebook.svg" alt="facebook icon">
+        </a>
       </li>
       <li class="socials__item">
-        <a class="socials__link socials__link--youtube" href="#"></a>
+        <a class="socials__link socials__link--youtube" href="#">
+          <img src="img/icon-youtube.svg" alt="youtube icon">
+        </a>
       </li>
     </ul>
     <div class="page-footer__copyright copyright">
       <b class="copyright__text">Разработано</b>
-      <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive"></a>
+      <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
+        <img src="img/logo-htmlacademy.svg" alt="htmlacademy logo">
+      </a>
     </div>
   </footer>
   <script src="./js/toggle-menu.js"></script>

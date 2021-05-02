@@ -19,6 +19,7 @@
   }
 
   @media (min-width: @desktop-width) {
+    .container;
     grid-template-columns: 1fr 1fr;
     grid-row-gap: 74px;
 
@@ -116,6 +117,11 @@
     border: 2px solid @bg-lightgrey;
     padding-bottom: 0;
   }
+
+  @media (min-width: @desktop-width) {
+    width: 100%;
+    padding: 0;
+  }
 }
 
 .form__submit-wrapper {
@@ -141,6 +147,7 @@
   padding-top: 42px;
   margin: 0;
   position: relative;
+  .container;
 
   @media (max-width: @mobile-width) {
     margin-bottom: 52px;
@@ -155,10 +162,6 @@
     margin-bottom: 70px;
 
     grid-area: textarea;
-  }
-
-  @media (min-width: @desktop-width) {
-    width: 100%;
   }
 }
 
@@ -198,7 +201,6 @@
 
 .form__fieldset--adventures {
   @media (min-width: @tablet-width) {
-    width: 100%;
     order: 4;
     grid-area: adventures;
   }

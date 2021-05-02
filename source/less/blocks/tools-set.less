@@ -26,8 +26,45 @@
   }
 }
 
+.tools-set__range {
+  @media (max-width: @mobile-width) {
+    display: none;
+  }
+}
+
+.tools-set__item:first-child {
+  &::before {
+    content: "";
+    display: block;
+    background-image: url("/img/icon-editor-crop.svg");
+    background-repeat: no-repeat;
+    height: 40px;
+    width: 40px;
+  }
+}
+
+.tools-set__item:nth-child(2) {
+  &::before {
+    content: "";
+    display: block;
+    background-image: url("/img/icon-editor-fill.svg");
+    background-repeat: no-repeat;
+    height: 40px;
+    width: 40px;
+  }
+}
+
 .tools-set__item:last-child {
   @media (min-width: @tablet-width) {
     margin-bottom: 0;
+  }
+
+  &::before {
+    content: "";
+    display: block;
+    background-image: url("../img/icon-editor-contrast.svg");
+    background-repeat: no-repeat;
+    height: 40px;
+    width: 40px;
   }
 }

@@ -13,7 +13,11 @@
     <nav class="main-nav main-nav--nojs">
       <div class="page-header__logo">
         <a class="page-header__logo-link" href="index.html">
-          Pink
+          <picture class="page-header__logo-image">
+            <source media="(min-width: 960px)" srcset="img/logo-pink-white-desktop.svg">
+            <source media="(min-width: 660px)" srcset="img/logo-pink-white-tablet.svg">
+            <img src="img/logo-pink-white-mobile.svg" alt="Pink logo">
+          </picture>
         </a>
         <button class="page-header__logo-toggle" type="button">
           <div>
@@ -55,8 +59,7 @@
         <h1 class="banner__text page-title page-title--white page-title--index">
           Взгляните на жизнь иначе!
         </h1>
-        <img class="banner__image" src="https://via.placeholder.com/150x150" width="320" height="286"
-          alt="hand holding a phone with a pink picture on it">
+
         <div class="download-info">
           <a class="download-info__link button" href="#">
             Скачать приложение
@@ -64,17 +67,17 @@
           <ul class="download-info__platforms-list">
             <li class="download-info__platforms-item">
               <a class="download-info__platforms-link" href="#">
-                <img src="https://via.placeholder.com/150x150" class="download-info__img" alt="apple picture">
+                <img src="img/logo-apple.svg" class="download-info__img" alt="apple picture">
               </a>
             </li>
             <li class="download-info__platforms-item">
               <a class="download-info__platforms-link" href="#">
-                <img src="https://via.placeholder.com/150x150" class="download-info__img" alt="android picture">
+                <img src="img/logo-android.svg" class="download-info__img" alt="android picture">
               </a>
             </li>
             <li class="download-info__platforms-item">
               <a class="download-info__platforms-link" href="#">
-                <img src="https://via.placeholder.com/150x150" class="download-info__img" alt="microsoft picture">
+                <img src="img/logo-microsoft.svg" class="download-info__img" alt="microsoft picture">
               </a>
             </li>
           </ul>
@@ -96,8 +99,12 @@
       <h2 class="visually-hidden">Особенности</h2>
       <ul class="features__list container">
         <li class="features__item">
-          <img class="features__img features__img--desktop" src="https://via.placeholder.com/150x150" width="157"
-            height="320" alt="iphone screen with grey trash-bins">
+          <picture class="features__img features__img--desktop">
+            <source media="(min-width: 960px)"
+              srcset="img/iphone-screen-1-desktop@1x.png 1x, img/iphone-screen-1-desktop@2x.png 2x">
+            <img src="img/iphone-screen-1-tablet@1x.png" srcset="img/iphone-screen-1-tablet@2x.png 2x"
+              alt="iphone screen with grey trash-bins">
+          </picture>
           <h3 class="features__title">
             Поднимает настроение
           </h3>
@@ -106,8 +113,12 @@
           </p>
         </li>
         <li class="features__item">
-          <img class="features__img features__img--desktop" src="https://via.placeholder.com/150x150" width="157"
-            height="320" alt="iphone screen with pink trash-bins">
+          <picture class="features__img features__img--desktop">
+            <source media="(min-width: 960px)"
+              srcset="img/iphone-screen-2-desktop@1x.png 1x, img/iphone-screen-2-desktop@2x.png 2x">
+            <img src="img/iphone-screen-2-tablet@1x.png" srcset="img/iphone-screen-2-tablet@2x.png 2x"
+              alt="iphone screen with pink trash-bins">
+          </picture>
           <h3 class="features__title">
             Меняет мир вокруг
           </h3>
@@ -116,8 +127,14 @@
           </p>
         </li>
         <li class="features__item">
-          <img class="features__img features__img--desktop" src="https://via.placeholder.com/150x150" width="157"
-            height="320" alt="iphone screen with a smiley face">
+          <picture class="features__img">
+            <source media="(min-width: 960px)"
+              srcset="img/iphone-screen-3-desktop@1x.png 1x, img/iphone-screen-3-desktop@2x.png 2x">
+            <source media="(min-width: 660px)"
+              srcset="img/iphone-screen-3-tablet@1x.png 1x, img/iphone-screen-3-tablet@2x.png 2x">
+            <img src="img/iphone-screen-mobile@1x.png" srcset="img/iphone-screen-mobile@2x.png 2x"
+              alt="iphone screen with a smiley face">
+          </picture>
           <h3 class="features__title">
             Заводит новых друзей
           </h3>
@@ -129,7 +146,7 @@
     </section>
 
     <section class="research">
-      <img class="research__image" src="https://via.placeholder.com/150x150" width="238" height="276"
+      <img class="research__image" src="img/icon-timer.svg" width="238" height="276"
         alt="stopwatch with number 24 in it">
       <div class="research__wrapper">
         <h2 class="research__title">
@@ -267,28 +284,43 @@
       </div>
     </section>
     <div class="map">
-      <img class="map__image" src="https://via.placeholder.com/150x150" alt="map to the studio">
+      <picture class="map__image">
+        <source media="(min-width: 960px)" srcset="img/bg-map-desktop@1x.jpg 1x, img/bg-map-desktop@2x.jpg 2x">
+        <source media="(min-width: 660px)" srcset="img/bg-map-tablet@1x.jpg 1x, img/bg-map-tablet@2x.jpg 2x">
+        <img src="img/bg-map-mobile@1x.png" srcset="img/bg-map-mobile@2x.jpg 2x" alt="map to the studio">
+      </picture>
     </div>
   </main>
 
   <footer class="page-footer container">
     <a class="page-footer__logo">
-      Pink
+      <picture class="page-footer__logo-image">
+        <source media="(min-width: 960px)" srcset="img/logo-pink-blue-desktop.svg">
+        <img src="img/logo-pink-blue-mobile.svg" alt="Pink logo">
+      </picture>
     </a>
     <ul class="socials">
       <li class="socials__item">
-        <a class="socials__link socials__link--twitter" href="#"></a>
+        <a class="socials__link socials__link--twitter" href="#">
+          <img src="img/icon-twitter.svg" alt="twitter icon">
+        </a>
       </li>
       <li class="socials__item">
-        <a class="socials__link socials__link--facebook" href="#"></a>
+        <a class="socials__link socials__link--facebook" href="#">
+          <img src="img/icon-facebook.svg" alt="facebook icon">
+        </a>
       </li>
       <li class="socials__item">
-        <a class="socials__link socials__link--youtube" href="#"></a>
+        <a class="socials__link socials__link--youtube" href="#">
+          <img src="img/icon-youtube.svg" alt="youtube icon">
+        </a>
       </li>
     </ul>
     <div class="page-footer__copyright copyright">
       <b class="copyright__text">Разработано</b>
-      <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive"></a>
+      <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
+        <img src="/img/logo-htmlacademy.svg" alt="htmlacademy logo">
+      </a>
     </div>
   </footer>
   <script src="./js/toggle-menu.js"></script>
