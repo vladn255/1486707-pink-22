@@ -1,0 +1,54 @@
+.logo--header {
+  .logo__sparkles {
+    display: none;
+
+    @media (min-width: @desktop-width) {
+      display: block;
+    }
+  }
+
+  .logo__glasses--tablet {
+    display: none;
+
+    @media (min-width: @tablet-width) {
+      display: block;
+    }
+
+    @media (min-width: @desktop-width) {
+      display: none;
+    }
+  }
+
+  .logo__glasses--desktop {
+    display: none;
+
+    @media (min-width: @desktop-width) {
+      display: block;
+    }
+  }
+}
+
+.logo--footer {
+  .logo__sparkles {
+    display: none;
+
+    @media (min-width: @desktop-width) {
+      display: block;
+    }
+  }
+
+  .logo__glasses {
+    color: @static-red;
+    @media (min-width: @desktop-width) {
+      display: none;
+    }
+  }
+
+  .logo__glasses--desktop {
+    display: none;
+
+    @media (min-width: @desktop-width) {
+      display: block;
+    }
+  }
+}

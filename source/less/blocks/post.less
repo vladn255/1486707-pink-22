@@ -1,6 +1,10 @@
 .post {
   background-color: @bg-lightgrey;
 
+  @media (max-width: @mobile-width) {
+    margin-bottom: 20px;
+  }
+
   @media (min-width: @tablet-width) {
     width: 300px;
     position: relative;
