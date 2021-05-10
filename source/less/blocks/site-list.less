@@ -33,6 +33,7 @@
     padding-top: 49px;
     margin-right: 85px;
     box-shadow: none;
+    padding-bottom: 19px;
   }
 }
 
@@ -47,4 +48,23 @@
   margin: auto;
   text-align: center;
   color: @font-white;
+
+  &:hover {
+    color: @hover-red;
+  }
+
+  &:active {
+    opacity: 0.3;
+    color: @down-red;
+
+    @media (min-width: @desktop-width) {
+      color: @static-white;
+    }
+  }
+}
+
+.site-list__item--active {
+  @media (min-width: @desktop-width) {
+    border-bottom: 2px solid @font-white;
+  }
 }

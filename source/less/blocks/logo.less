@@ -1,4 +1,13 @@
 .logo--header {
+  &:hover {
+    color: @hover-red;
+  }
+
+  &:active {
+    opacity: 0.3;
+    color: @down-grey;
+  }
+
   .logo__sparkles {
     display: none;
 
@@ -29,6 +38,16 @@
 }
 
 .logo--footer {
+  &:active {
+    opacity: 0.3;
+  }
+
+  .logo__title {
+    &:hover {
+      color: @hover-red;
+    }
+  }
+
   .logo__sparkles {
     display: none;
 

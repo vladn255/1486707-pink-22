@@ -1,6 +1,7 @@
 .download-info {
   text-align: center;
   padding-top: 33px;
+  width: 100%;
 
   position: relative;
   z-index: 2;
@@ -23,6 +24,21 @@
   border-color: @bg-white;
   margin: auto;
   margin-bottom: 38px;
+  padding-left: 0;
+  padding-right: 0;
+
+  &:hover {
+    color: @font-red;
+    background-color: @bg-white;
+  }
+
+  &:active {
+    color: @down-red;
+
+    .download-info__link-title {
+      opacity: 0.3;
+    }
+  }
 
   @media (min-width: @tablet-width) {
     max-width: 300px;

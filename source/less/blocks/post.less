@@ -7,7 +7,6 @@
 
   @media (min-width: @tablet-width) {
     width: 300px;
-    position: relative;
   }
 }
 
@@ -30,6 +29,9 @@
 }
 
 .post__info {
+  padding-left: 17px;
+  margin-bottom: 20px;
+
   @media (min-width: @tablet-width) {
     padding-top: 7px;
     padding-bottom: 10px;
@@ -79,14 +81,33 @@
 }
 
 .post__likes-count {
+  display: block;
+  width: 100%;
+  position: relative;
   font-size: 12px;
   line-height: 24px;
   text-transform: uppercase;
   color: @font-red;
+  padding-left: 20px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 6px;
+    background-image: url("../img/icons/icon-heart.svg");
+    background-repeat: no-repeat;
+    height: 12px;
+    width: 14px;
+
+    @media (min-width: @tablet-width) {
+      left: auto;
+      right: 0;
+    }
+  }
 
   @media (min-width: @tablet-width) {
-    position: absolute;
-    bottom: 23px;
+    padding-left: 0;
   }
 }
 

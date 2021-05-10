@@ -36,9 +36,58 @@
   }
 }
 
-.button--submit {
-  background-color: @hover-green;
-  border: 2px solid @hover-green;
+.button--submit,
+.button--popup {
+  background-color: @static-green;
+  border: 2px solid @static-green;
   border-radius: 1px;
   color: @font-white;
+  text-transform: uppercase;
+
+  &:hover {
+    background-color: @hover-green;
+  }
+
+  &:active {
+    .button__title {
+      opacity: 0.3;
+    }
+  }
+
+  &:disabled {
+    background-color: @bg-black;
+    opacity: 0.1;
+    border: none;
+  }
+}
+
+.button--submit {
+  margin-left: auto;
+  margin-right: auto;
+  width: 280px;
+  min-height: 63px;
+  padding: 0;
+
+  @media (min-width: @tablet-width) {
+    width: 300px;
+  }
+}
+
+.button--popup {
+  margin-left: auto;
+  margin-right: auto;
+  width: 280px;
+
+  @media (min-width: @tablet-width) {
+    width: 300px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 460px;
+  }
+}
+
+.button--post,
+.button--reset {
+  width: 100%;
 }

@@ -7,12 +7,29 @@
 
 .socials__item {
   margin-right: 14px;
+
+  &:active {
+    opacity: 0.3;
+
+    .socials__circle {
+      opacity: 0.1;
+    }
+  }
 }
 
 .socials__item:last-child {
   margin-right: 0;
 }
 
-.solcials__link {
+.socials__link {
   color: @static-red;
+}
+
+.socials__circle {
+  color: @bg-darkgrey;
+  opacity: 0.1;
+
+  &:hover {
+    opacity: 1;
+  }
 }

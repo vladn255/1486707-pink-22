@@ -183,7 +183,7 @@
 }
 
 .form__fieldset--grey {
-  @media (max-width: @mobile-width) {
+  @media (max-width: calc(@tablet-width - 1px)) {
     background-color: @bg-lightgrey;
     margin: 0;
     padding-left: 0;
@@ -194,7 +194,7 @@
 
 .form__fieldset--grey .form__legend,
 .form__fieldset--grey .form__list {
-  @media (max-width: @mobile-width) {
+  @media (max-width: calc(@tablet-width - 1px)) {
     .container;
   }
 }
@@ -256,6 +256,11 @@
 .form__intro--required-t {
   text-transform: uppercase;
   display: block;
+
+  &::before {
+    content: "*";
+    color: @font-red;
+  }
 }
 
 .form__intro--required-d {

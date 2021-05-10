@@ -52,6 +52,15 @@
   width: 50px;
   background-color: @bg-white;
   margin-right: 20px;
+
+  &:hover {
+    background-color: @hover-red;
+  }
+
+  &:active {
+    opacity: 0.3;
+    background-color: @down-red;
+  }
 }
 
 .page-header__logo-toggle > div {
@@ -72,6 +81,14 @@
 
 .main-nav--opened .page-header__logo-toggle > div {
   height: 0;
+
+  &:hover {
+    background-color: @hover-red;
+  }
+
+  &:active {
+    background-color: @down-red;
+  }
 
   @media (max-width: @desktop-width) {
     &::before,
