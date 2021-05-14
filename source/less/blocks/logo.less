@@ -1,11 +1,17 @@
 .logo--header {
+  margin-left: -72px;
+
+  @media (min-width: @tablet-width) {
+    margin-left: 0;
+  }
+
   &:hover {
     color: @hover-red;
   }
 
   &:active {
     opacity: 0.3;
-    color: @down-grey;
+    color: @bg-white;
   }
 
   .logo__sparkles {

@@ -1,7 +1,11 @@
 .posts {
+  padding-top: 45px;
+
   @media (min-width: @tablet-width) {
     row-gap: 20px;
     padding-top: 91px;
+    padding-left: 0;
+    padding-right: 0;
   }
 }
 
@@ -9,7 +13,10 @@
   font-size: @fs-base;
   text-align: center;
   padding: 0;
+  padding-left: 15px;
+  padding-right: 15px;
   margin: 0;
+  margin-bottom: 50px;
   grid-area: posts__intro;
 
   @media (min-width: @tablet-width) {
@@ -45,11 +52,5 @@
 
     grid-row-gap: 54px;
     grid-column-gap: 20px;
-  }
-}
-
-.posts__item {
-  @media (min-width: @tablet-width) {
-    padding-bottom: 15px;
   }
 }

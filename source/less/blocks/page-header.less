@@ -1,5 +1,7 @@
 .page-header {
-  background-color: @bg-darkgrey;
+  background-color: fade(@bg-black, 40%);
+  position: relative;
+  z-index: 2;
 }
 
 .page-header__logo {
@@ -13,8 +15,8 @@
   padding-bottom: 10px;
 
   @media (min-width: @tablet-width) {
-    padding-top: 43px;
-    padding-bottom: 43px;
+    padding-top: 30px;
+    padding-bottom: 32px;
   }
 
   @media (min-width: @desktop-width) {
@@ -29,6 +31,7 @@
 }
 
 .page-header__logo-toggle {
+  display: block;
   border: none;
   outline: none;
   padding: 0;
@@ -36,15 +39,34 @@
   height: 24px;
   background-color: inherit;
 
+  &:hover {
+    background-color: @hover-red;
+
+    &::before,
+    &::after {
+      background-color: @hover-red;
+    }
+  }
+
+  &:active {
+    opacity: 0.3;
+    background-color: @down-red;
+
+    &::before,
+    &::after {
+      opacity: 0.3;
+      background-color: @down-red;
+    }
+  }
+
   @media (min-width: @desktop-width) {
     display: none;
   }
 }
 
-.page-header__logo-toggle > div,
-.page-header__logo-toggle > div::before,
-.page-header__logo-toggle > div::after {
-  display: block;
+.page-header__logo-toggle,
+.page-header__logo-toggle::before,
+.page-header__logo-toggle::after {
   position: absolute;
   top: 50%;
   right: 0;
@@ -52,18 +74,9 @@
   width: 50px;
   background-color: @bg-white;
   margin-right: 20px;
-
-  &:hover {
-    background-color: @hover-red;
-  }
-
-  &:active {
-    opacity: 0.3;
-    background-color: @down-red;
-  }
 }
 
-.page-header__logo-toggle > div {
+.page-header__logo-toggle {
   &::before,
   &::after {
     margin-right: 0;
@@ -71,24 +84,16 @@
   }
 
   &::before {
-    top: -8px;
+    top: -10px;
   }
 
   &::after {
-    top: 8px;
+    top: 10px;
   }
 }
 
-.main-nav--opened .page-header__logo-toggle > div {
+.main-nav--opened .page-header__logo-toggle {
   height: 0;
-
-  &:hover {
-    background-color: @hover-red;
-  }
-
-  &:active {
-    background-color: @down-red;
-  }
 
   @media (max-width: @desktop-width) {
     &::before,

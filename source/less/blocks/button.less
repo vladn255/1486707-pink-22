@@ -2,11 +2,6 @@
   display: block;
   box-sizing: border-box;
 
-  padding-top: 21px;
-  padding-bottom: 21px;
-  padding-left: 58px;
-  padding-right: 59px;
-
   font-weight: bold;
   font-size: @fs-title;
   line-height: @lh-base;
@@ -43,6 +38,9 @@
   border-radius: 1px;
   color: @font-white;
   text-transform: uppercase;
+  margin-left: auto;
+  margin-right: auto;
+  width: @mobile-width;
 
   &:hover {
     background-color: @hover-green;
@@ -62,11 +60,11 @@
 }
 
 .button--submit {
-  margin-left: auto;
-  margin-right: auto;
-  width: 280px;
   min-height: 63px;
   padding: 0;
+  width: 280px;
+  margin: auto;
+  margin-bottom: 34px;
 
   @media (min-width: @tablet-width) {
     width: 300px;
@@ -74,10 +72,6 @@
 }
 
 .button--popup {
-  margin-left: auto;
-  margin-right: auto;
-  width: 280px;
-
   @media (min-width: @tablet-width) {
     width: 300px;
   }
@@ -90,4 +84,46 @@
 .button--post,
 .button--reset {
   width: 100%;
+  padding-top: 15px;
+  padding-bottom: 15px;
+
+  @media (min-width: @tablet-width) {
+    margin-left: 10px;
+    width: 260px;
+  }
+}
+
+.button--post {
+  margin-bottom: 15px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 25px;
+  }
+
+  &:hover {
+    background-color: @hover-red;
+    color: @font-white;
+  }
+
+  &:active {
+    .button__title {
+      opacity: 0.3;
+    }
+  }
+}
+
+.button--reset {
+  opacity: 0.1;
+  color: @bg-darkgrey;
+  border: 2px solid @bg-darkgrey;
+
+  &:hover {
+    opacity: 0.3;
+  }
+
+  &:active {
+    background-color: @bg-darkgrey;
+    color: @font-white;
+    opacity: 0.3;
+  }
 }

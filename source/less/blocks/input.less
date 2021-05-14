@@ -1,16 +1,15 @@
 .input {
-  margin-bottom: 20px;
-
   @media (min-width: @tablet-width) {
     margin-bottom: 50px;
   }
 }
 
 .input__label {
-  font-size: @fs-base;
+  font-size: @fs-title;
   color: @font-black;
-  text-transform: uppercase;
-  display: block;
+  display: flex;
+  align-items: center;
+  padding-left: 23px;
 
   @media (min-width: @tablet-width) {
     order: -1;
@@ -24,6 +23,7 @@
   border-radius: 1px;
 
   padding-left: 20px;
+  padding-top: 12px;
   min-height: 59px;
   display: block;
 
@@ -55,6 +55,9 @@
   font-size: @fs-title;
   font-family: inherit;
   width: 100%;
+  padding-top: 15px;
+  padding-left: 21px;
+  line-height: 30px;
 }
 
 .input__icon-wrapper {
@@ -76,41 +79,73 @@
   }
 }
 
+.input__label--checkbox {
+  padding-left: 0;
+
+  &:hover {
+    &::before {
+      border-color: @bullet-grey;
+    }
+  }
+
+  &:active {
+    &::before {
+      border-color: @down-red;
+    }
+  }
+
+  &::before {
+    display: block;
+    margin-right: 22px;
+    content: "";
+    width: 35px;
+    height: 35px;
+    border: 2px solid #e5e5e5;
+    border-radius: 1px;
+    background-color: @bg-white;
+  }
+}
+
+.input__field--checkbox:checked + .input__label--checkbox::before {
+  background-image: url(./../img/design-elements/tick.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.input__label--radio {
+  &:hover {
+    &::before {
+      border-color: @bullet-grey;
+    }
+  }
+
+  &:active {
+    &::before {
+      border-color: @down-red;
+    }
+  }
+
+  &::before {
+    display: block;
+    margin-right: 33px;
+    content: "";
+    width: 37px;
+    height: 37px;
+    border: 2px solid #e5e5e5;
+    border-radius: 50%;
+    background-color: @bg-white;
+  }
+}
+
+.input__radio:checked + .input__label--radio::before {
+  background-image: url(./../img/design-elements/red-radio-circle.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
 .input__label--red {
   color: @font-red;
-}
-
-.input__icon--checkbox {
-  color: @bg-black;
-  opacity: 0.3;
-
-  &:hover {
-    opacity: 1;
-  }
-
-  &:checked {
-    color: @bg-red;
-  }
-}
-
-.input__field--checkbox:checked {
-  .input__icon--checkbox {
-    background-image: url("../img/design-elements/tick.svg");
-    background-color: blue;
-  }
-}
-
-.input__icon--radio {
-  color: @bg-black;
-  opacity: 0.3;
-
-  &:hover {
-    opacity: 1;
-  }
-
-  &:checked {
-    color: @bg-red;
-  }
+  text-transform: uppercase;
 }
 
 .input__icon--phone,

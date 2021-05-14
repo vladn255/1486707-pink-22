@@ -15,24 +15,22 @@
         <a class="page-header__logo-link" href="index.html">
           <svg class="logo logo--header" width="146px" height="40px" aria-label="pink logo link">
             <g class="logo__title">
-              <use xlink:href="./sprite.svg#icon-logo-title"></use>
+              <use xlink:href="./img/sprite.svg#icon-logo-title"></use>
             </g>
             <g class="logo__glasses logo__glasses--tablet">
-              <use xlink:href="./sprite.svg#icon-logo-glasses-tablet"></use>
+              <use xlink:href="./img/sprite.svg#icon-logo-glasses-tablet"></use>
             </g>
             <g class="logo__glasses logo__glasses--desktop">
-              <use xlink:href="./sprite.svg#icon-logo-glasses-desktop"></use>
+              <use xlink:href="./img/sprite.svg#icon-logo-glasses-desktop"></use>
             </g>
             <g class="logo__sparkles">
-              <use xlink:href="./sprite.svg#icon-logo-sparkles"></use>
+              <use xlink:href="./img/sprite.svg#icon-logo-sparkles"></use>
             </g>
           </svg>
         </a>
         <button class="page-header__logo-toggle" type="button">
-          <div>
-            <span class="visually-hidden">Открыть меню</span>
-            <span class="visually-hidden">Закрыть меню</span>
-          </div>
+          <span class="visually-hidden">Открыть меню</span>
+          <span class="visually-hidden">Закрыть меню</span>
         </button>
       </div>
       <div class="main-nav__wrapper">
@@ -103,9 +101,6 @@
               <input class="input__field input__field--checkbox visually-hidden" type="checkbox" id="shark-selfie"
                 value="shark-selfie" checked>
               <label class="input__label input__label--checkbox" for="shark-selfie">
-                <svg class="input__icon input__icon--checkbox" width="35" height="35">
-                  <use xlink:href="./sprite.svg#checkbox"></use>
-                </svg>
                 Сделал селфи с акулой
               </label>
             </li>
@@ -114,9 +109,6 @@
               <input class="input__field input__field--checkbox visually-hidden" type="checkbox" id="beach-sunburn"
                 value="beach-sunburn" checked>
               <label class="input__label input__label--checkbox" for="beach-sunburn">
-                <svg class="input__icon input__icon--checkbox" width="35" height="35">
-                  <use xlink:href="./sprite.svg#checkbox"></use>
-                </svg>
                 Обгорел на пляже
               </label>
             </li>
@@ -125,9 +117,6 @@
               <input class="input__field input__field--checkbox visually-hidden" type="checkbox"
                 id="chuck-norris-witnessed" value="chuck-norris-witnessed">
               <label class="input__label input__label--checkbox" for="chuck-norris-witnessed">
-                <svg class="input__icon input__icon--checkbox" width="35" height="35">
-                  <use xlink:href="./sprite.svg#checkbox"></use>
-                </svg>
                 Видел Чака Норриса
               </label>
             </li>
@@ -136,9 +125,6 @@
               <input class="input__field input__field--checkbox visually-hidden" type="checkbox" id="bought-souvenirs"
                 value="bought-souvenirs">
               <label class="input__label input__label--checkbox" for="bought-souvenirs">
-                <svg class="input__icon input__icon--checkbox" width="35" height="35">
-                  <use xlink:href="./sprite.svg#checkbox"></use>
-                </svg>
                 Накупил сувениров
               </label>
             </li>
@@ -147,9 +133,6 @@
               <input class="input__field input__field--checkbox visually-hidden" type="checkbox" id="tower-holding"
                 value="tower-holding" checked>
               <label class="input__label input__label--checkbox" for="tower-holding">
-                <svg class="input__icon input__icon--checkbox" width="35" height="35">
-                  <use xlink:href="./sprite.svg#checkbox"></use>
-                </svg>
                 Удержал башню
               </label>
             </li>
@@ -158,9 +141,6 @@
               <input class="input__field input__field--checkbox visually-hidden" type="checkbox" id="hotel-trashed"
                 value="hotel-trashed">
               <label class="input__label input__label--checkbox" for="hotel-trashed">
-                <svg class="input__icon input__icon--checkbox" width="35" height="35">
-                  <use xlink:href="./sprite.svg#checkbox"></use>
-                </svg>
                 Разгромил отель
               </label>
             </li>
@@ -173,7 +153,7 @@
             <div class="input__icon-wrapper">
               <svg class="input__icon input__icon--phone" viewBox="0 0 20 20" width="59px" height="59px"
                 preserveAspectRatio="xMidYMid">
-                <use xlink:href="./sprite.svg#icon-phone"></use>
+                <use xlink:href="./img/sprite.svg#icon-phone"></use>
               </svg>
             </div>
             <label class="input__label input__label--red" for="phone">
@@ -184,7 +164,7 @@
             <input class="input__field" type="email" id="email" placeholder="Введите почту*" required>
             <div class="input__icon-wrapper">
               <svg class="input__icon input__icon--mail" width="18px" height="14px">
-                <use xlink:href="./sprite.svg#icon-mail"></use>
+                <use xlink:href="./img/sprite.svg#icon-mail"></use>
               </svg>
             </div>
             <label class="input__label input__label--red" for="email">
@@ -198,29 +178,20 @@
           </p>
           <ul class="form__list">
             <li class="form__item input">
-              <input class="input__radio visually-hidden" type="radio" id="ios_pink" value="ios_pink" checked>
+              <input class="input__radio visually-hidden" type="radio" id="ios_pink" value="ios_pink" name="used_app" checked>
               <label class="input__label input__label--radio" for="ios_pink">
-                <svg class="input__icon input__icon--radio" width="41" height="41">
-                  <use xlink:href="./sprite.svg#radio"></use>
-                </svg>
                 Pink для iOS</label>
             </li>
 
             <li class="form__item input">
-              <input class="input__radio visually-hidden" type="radio" id="android_pink" value="android_pink">
-              <label class="input__label input__label--radio" for="android_pink"><svg
-                  class="input__icon input__icon--radio" width="41" height="41">
-                  <use xlink:href="./sprite.svg#radio"></use>
-                </svg>
+              <input class="input__radio visually-hidden" type="radio" id="android_pink" value="android_pink" name="used_app">
+              <label class="input__label input__label--radio" for="android_pink">
                 Pink на Android</label>
             </li>
 
             <li class="form__item input">
-              <input class="input__radio visually-hidden" type="radio" id="windows_phone" value="windows_phone">
-              <label class="input__label input__label--radio" for="windows_phone"><svg
-                  class="input__icon input__icon--radio" width="41" height="41">
-                  <use xlink:href="./sprite.svg#radio"></use>
-                </svg>
+              <input class="input__radio visually-hidden" type="radio" id="windows_phone" value="windows_phone" name="used_app">
+              <label class="input__label input__label--radio" for="windows_phone">
                 Windows Phone</label>
             </li>
           </ul>
@@ -265,16 +236,16 @@
     <a class="page-footer__logo">
       <svg class="logo logo--footer" width="146px" height="40px" aria-label="pink logo">
         <g class="logo__title">
-          <use xlink:href="./sprite.svg#icon-logo-title"></use>
+          <use xlink:href="./img/sprite.svg#icon-logo-title"></use>
         </g>
         <g class="logo__glasses">
-          <use xlink:href="./sprite.svg#icon-logo-glasses-tablet"></use>
+          <use xlink:href="./img/sprite.svg#icon-logo-glasses-tablet"></use>
         </g>
         <g class="logo__glasses logo__glasses--desktop">
-          <use xlink:href="./sprite.svg#icon-logo-glasses-desktop"></use>
+          <use xlink:href="./img/sprite.svg#icon-logo-glasses-desktop"></use>
         </g>
         <g class="logo__sparkles">
-          <use xlink:href="./sprite.svg#icon-logo-sparkles"></use>
+          <use xlink:href="./img/sprite.svg#icon-logo-sparkles"></use>
         </g>
       </svg>
     </a>
@@ -284,7 +255,7 @@
           <svg width="54" height="54" aria-label="twitter link">
             <circle class="socials__circle" cx="27" cy="27" r="25.5" fill="white" stroke="currentColor"
               stroke-width="3" />
-            <use xlink:href="./sprite.svg#icon-twitter"></use>
+            <use xlink:href="./img/sprite.svg#icon-twitter"></use>
           </svg>
         </a>
       </li>
@@ -293,7 +264,7 @@
           <svg width="54" height="54" aria-label="facebook link">
             <circle class="socials__circle" cx="27" cy="27" r="25.5" fill="white" stroke="currentColor"
               stroke-width="3" />
-            <use xlink:href="./sprite.svg#icon-facebook"></use>
+            <use xlink:href="./img/sprite.svg#icon-facebook"></use>
           </svg>
         </a>
       </li>
@@ -302,7 +273,7 @@
           <svg width="54" height="54" aria-label="youtube-link">
             <circle class="socials__circle" cx="27" cy="27" r="25.5" fill="white" stroke="currentColor"
               stroke-width="3" />
-            <use xlink:href="./sprite.svg#icon-youtube"></use>
+            <use xlink:href="./img/sprite.svg#icon-youtube"></use>
           </svg>
         </a>
       </li>
@@ -311,7 +282,7 @@
       <b class="copyright__text">Разработано</b>
       <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
         <svg width="27" height="34" aria-label="htmlacademy link">
-          <use xlink:href="./sprite.svg#icon-htmlacademy"></use>
+          <use xlink:href="./img/sprite.svg#icon-htmlacademy"></use>
         </svg>
       </a>
     </div>

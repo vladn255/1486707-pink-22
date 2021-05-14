@@ -11,7 +11,7 @@
   }
 
   @media (min-width: @tablet-width) {
-    margin-bottom: 85px;
+    margin-bottom: 58px;
   }
 
   @media (min-width: @desktop-width) {
@@ -22,7 +22,14 @@
 
 .tools-set__item {
   @media (min-width: @tablet-width) {
-    margin-bottom: 42px;
+    padding-bottom: 20px;
+    border-bottom: 2px solid @bg-darkgrey;
+  }
+}
+
+.tools-set__item:not(:nth-child(1)) {
+  @media (min-width: @tablet-width) {
+    padding-top: 20px;
   }
 }
 
