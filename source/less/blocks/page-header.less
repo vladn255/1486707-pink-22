@@ -39,6 +39,20 @@
   height: 24px;
   background-color: inherit;
 
+  &::before,
+  &::after {
+    margin-right: 0;
+    content: "";
+  }
+
+  &::before {
+    top: -10px;
+  }
+
+  &::after {
+    top: 10px;
+  }
+
   &:hover {
     background-color: @hover-red;
 
@@ -74,22 +88,6 @@
   width: 50px;
   background-color: @bg-white;
   margin-right: 20px;
-}
-
-.page-header__logo-toggle {
-  &::before,
-  &::after {
-    margin-right: 0;
-    content: "";
-  }
-
-  &::before {
-    top: -10px;
-  }
-
-  &::after {
-    top: 10px;
-  }
 }
 
 .main-nav--opened .page-header__logo-toggle {
