@@ -17,6 +17,9 @@
       "review"
       "textarea"
       "submit-button";
+
+    padding-top: 40px;
+    padding-bottom: 56px;
   }
 
   @media (min-width: @desktop-width) {
@@ -42,21 +45,22 @@
   @media (min-width: @tablet-width) {
     font-size: @fs-title;
     line-height: 30px;
-    padding-left: 20px;
-    padding-right: 20px;
+    padding-left: 30px;
+    padding-right: 30px;
 
     grid-area: intro;
   }
 }
 
-.form-input {
+.form__input {
   display: flex;
   flex-direction: column-reverse;
-  margin-bottom: 26px;
 
   @media (min-width: @tablet-width) {
     display: flex;
+    flex-direction: row;
     align-items: center;
+    flex-wrap: wrap;
   }
 }
 
@@ -71,17 +75,16 @@
   line-height: @lh-base;
   color: @font-red;
   text-transform: uppercase;
-
   margin: 0;
   margin-bottom: 40px;
   text-align: center;
 
-  @media (max-width: @mobile-width) {
-    position: relative;
-  }
-
   @media (min-width: @tablet-width) {
+    position: relative;
     display: inline;
+    background-color: @bg-white;
+    padding-left: 25px;
+    padding-right: 25px;
   }
 }
 
@@ -122,6 +125,7 @@
   @media (min-width: @tablet-width) {
     border: 2px solid @bg-lightgrey;
     padding-bottom: 0;
+    text-align: center;
   }
 
   @media (min-width: @desktop-width) {
@@ -227,9 +231,21 @@
     margin-bottom: 10px;
   }
 
+  .input__label {
+    font-size: @fs-title;
+  }
+
   @media (min-width: @tablet-width) {
-    order: 4;
-    grid-area: adventures;
+    .form__legend {
+      padding-left: 25px;
+      padding-right: 25px;
+      top: -55px;
+    }
+
+    .form__input {
+      order: 4;
+      grid-area: adventures;
+    }
   }
 }
 
@@ -242,8 +258,21 @@
   padding-bottom: 25px;
 
   @media (min-width: @tablet-width) {
+    padding-top: 0;
+    padding-bottom: 0;
+    padding-left: 0;
+    padding-right: 0;
+    margin: 0;
     order: 1;
     grid-area: personal;
+
+    .input:not(:last-child) {
+      margin-bottom: 55px;
+    }
+
+    .input__label {
+      padding-left: 20px;
+    }
   }
 
   @media (min-width: @desktop-width) {
@@ -256,10 +285,13 @@
   padding-top: 38px;
 
   .form__legend {
-    padding-bottom: 38px;
+    @media (min-width: @tablet-width) {
+      top: -25px;
+    }
   }
 
   .input__label {
+    font-size: @fs-title;
     padding-left: 0;
   }
 
@@ -269,13 +301,20 @@
 
   @media (min-width: @tablet-width) {
     order: 2;
-    padding-top: 8px;
-    padding-left: 73px;
+    padding-top: 25px;
+    padding-left: 60px;
     grid-area: app;
-  }
 
-  @media (min-width: @desktop-width) {
-    padding-bottom: 15px;
+    .form__legend {
+      @media (min-width: @tablet-width) {
+        top: -40px;
+        left: -28px;
+      }
+    }
+
+    @media (min-width: @desktop-width) {
+      padding-bottom: 15px;
+    }
   }
 }
 
@@ -283,12 +322,40 @@
   padding-top: 33px;
   padding-bottom: 25px;
 
+  .form__legend {
+    display: none;
+  }
+
   @media (min-width: @tablet-width) {
     order: 3;
     padding-left: 20px;
     padding-right: 50px;
-    padding-top: 0;
+    padding-top: 15px;
+    padding-bottom: 0;
     grid-area: contacts;
+
+    .form__input:not(:last-child) {
+      margin-bottom: 30px;
+    }
+
+    .form__legend {
+      display: inline;
+      top: -30px;
+      left: 15px;
+    }
+
+    .input__label {
+      width: 100%;
+      order: 2;
+      padding-left: 57px;
+      padding-top: 7px;
+    }
+
+    .input__field {
+      margin-left: 38px;
+      margin-right: 0;
+      padding-right: 0;
+    }
   }
 
   @media (min-width: @desktop-width) {

@@ -19,12 +19,16 @@
     margin-bottom: 0;
   }
 
-  &:hover,
-  &:focus {
+  &[href]:hover,
+  &[href]:focus {
     color: @font-red;
+
+    .logo__title {
+      color: @hover-red;
+    }
   }
 
-  &:active {
+  &[href]:active {
     opacity: 0.3;
   }
 }

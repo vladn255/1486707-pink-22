@@ -1,12 +1,14 @@
 .banner {
   position: relative;
   background-color: @bg-darkgrey;
-  padding-top: calc(@main-margin-top + 34px);
   background-image: url("../img/banner/mobile/bg-back-mobile@1x.jpg");
-  background-position: center -57px;
+  background-position-x: center;
+  background-position-y: top;
   background-repeat: no-repeat;
   background-size: cover;
-  min-height: calc(@main-margin-top + 175px);
+  min-height: 175px;
+  padding-top: 100px;
+  padding-bottom: 44px;
 
   @media (min-resolution: 2dppx) {
     background-image: url("../img/banner/mobile/bg-back-mobile@2x.jpg");
@@ -17,8 +19,12 @@
     box-sizing: border-box;
     padding-left: 0;
     padding-right: 0;
-    padding-top: calc(@main-margin-top + 70px);
+    padding-top: 180px;
+    padding-bottom: 60px;
     background-image: url("../img/banner/tablet/bg-back-tablet@1x.jpg");
+    background-size: 182%;
+    background-position-x: center;
+    background-position-y: 7px;
 
     @media (min-resolution: 2dppx) {
       background-image: url("../img/banner/tablet/bg-back-tablet@2x.jpg");
@@ -29,7 +35,7 @@
     min-height: 282px;
     padding-left: 42px;
     padding-right: 26px;
-    padding-top: calc(@main-margin-top + 57px);
+    padding-top: 57px;
     background-image: url("../img/banner/desktop/bg-back-desktop@1x.jpg");
 
     @media (min-resolution: 2dppx) {
@@ -64,8 +70,8 @@
     position: absolute;
     z-index: 1;
     left: 50%;
-    top: 233px;
-    transform: translate(-62%);
+    top: 178px;
+    transform: translate(-163px);
 
     @media (min-resolution: 2dppx) {
       background-image: url("../img/banner/mobile/iphone-hand-mobile@2x.png");
@@ -78,7 +84,7 @@
       height: 545px;
       top: 50px;
       left: 50%;
-      transform: translate(-27%);
+      transform: translate(-182px);
 
       @media (min-resolution: 2dppx) {
         background-image: url("../img/banner/tablet/iphone-hand-tablet@2x.png");
@@ -119,10 +125,10 @@
 }
 
 .banner--index {
-  padding-top: calc(@main-margin-top + 25px);
+  padding-top: 67px;
 
   .banner__wrapper {
-    padding-left: 0;
+    padding-top: 25px;
   }
 
   @media (min-width: @tablet-width) {

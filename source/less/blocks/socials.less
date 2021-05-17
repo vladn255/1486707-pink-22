@@ -32,13 +32,15 @@
 
 .socials__link {
   color: @static-red;
+
+  &[href]:hover {
+    .socials__circle {
+      opacity: 1;
+    }
+  }
 }
 
 .socials__circle {
   color: @bg-darkgrey;
   opacity: 0.1;
-
-  &:hover {
-    opacity: 1;
-  }
 }

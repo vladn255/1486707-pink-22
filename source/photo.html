@@ -28,12 +28,12 @@
             </g>
           </svg>
         </a>
-        <button class="page-header__logo-toggle" type="button">
-          <div>
+        <div class=page-header__toggle-wrapper>
+          <button class="page-header__toggle" type="button">
             <span class="visually-hidden">Открыть меню</span>
             <span class="visually-hidden">Закрыть меню</span>
-          </div>
-        </button>
+          </button>
+        </div>
       </div>
       <div class="main-nav__wrapper">
         <ul class="main-nav__list site-list">
@@ -70,22 +70,24 @@
       </h1>
     </section>
 
-    <section class="posts container">
+    <section class="posts ">
       <h1 class="visually-hidden">Записи пользователей</h1>
       <p class="posts__intro">
         Взгляните на фотографии, которые выкладывают пользователи! Видите, как не хватает ваших?
       </p>
-      <div class="posts__wrapper">
+      <div class="posts__post-of-the-day">
+        <picture class="posts__post-of-the-day-photo">
+          <source media="(min-width: 1200px)"
+            srcset="./img/gallery/desktop/panorama-desktop@1x.jpg 1x, ./img/gallery/desktop/panorama-desktop@2x.jpg 2x">
+          <source media="(min-width: 660px)"
+            srcset="./img/gallery/tablet/panorama-tablet@1x.jpg 1x, ./img/gallery/tablet/panorama-tablet@2x.jpg 2x">
+          <img src="./img/gallery/mobile/panorama-mobile@1x.jpg" srcset="./img/gallery/mobile/panorama-mobile@2x.jpg 2x"
+            alt="post photo 1">
+        </picture>
+        <span class="posts__post-of-the-day-frame">Панорама дня</span>
+      </div>
+      <div class="posts__wrapper container">
         <article class="posts__item post post--of-the-day">
-          <span class="post__img-of-the-day">Панорама дня</span>
-          <picture class="post__photo post__photo--wide">
-            <source media="(min-width: 1200px)"
-              srcset="./img/gallery/desktop/panorama-desktop@1x.jpg 1x, ./img/gallery/desktop/panorama-desktop@2x.jpg 2x">
-            <source media="(min-width: 660px)"
-              srcset="./img/gallery/tablet/panorama-tablet@1x.jpg 1x, ./img/gallery/tablet/panorama-tablet@2x.jpg 2x">
-            <img src="./img/gallery/mobile/panorama-mobile@1x.jpg"
-              srcset="./img/gallery/mobile/panorama-mobile@2x.jpg 2x" alt="post photo 1">
-          </picture>
           <div class="post__info">
             <cite class="post__author">
               Анна
@@ -231,7 +233,8 @@
     <section class="photo-editor">
       <h2 class="visually-hidden">Photo editor</h2>
       <p class="photo-editor__text container">
-        Затмите их всех!\nВыкладывайте все, что накопилось в телефоне!
+        Затмите их всех!
+        Выкладывайте все, что накопилось в телефоне!
       </p>
       <div class="photo-editor__wrapper ">
         <picture class="photo-editor__photo">
