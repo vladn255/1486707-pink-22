@@ -10,10 +10,15 @@
   font-size: @fs-base;
   line-height: @lh-base;
   margin-right: 15px;
+
+  @media (min-width: @desktop-width) {
+    font-size: @fs-title;
+  }
 }
 
 .copyright__link {
   color: @font-red;
+  padding-top: 12px;
 
   &[href]:hover {
     color: @font-black;

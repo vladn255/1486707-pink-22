@@ -2,6 +2,11 @@
   background-color: fade(@bg-black, 40%);
   position: relative;
   z-index: 2;
+
+  @media (min-width: @desktop-width) {
+    width: 100%;
+    margin: auto;
+  }
 }
 
 .page-header__logo {
@@ -20,7 +25,9 @@
   }
 
   @media (min-width: @desktop-width) {
-    margin-right: 225px;
+    margin-right: 0;
+    padding-top: 28px;
+    padding-left: 10px;
   }
 }
 

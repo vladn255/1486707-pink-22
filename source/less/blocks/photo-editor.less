@@ -4,7 +4,7 @@
 
   @media (min-width: @desktop-width) {
     background-color: @bg-white;
-    margin-bottom: 5px;
+    margin-bottom: 25px;
   }
 }
 
@@ -23,8 +23,10 @@
   @media (min-width: @desktop-width) {
     background-color: @bg-lightgrey;
     justify-content: center;
-    padding-top: 58px;
-    padding-bottom: 54px;
+    padding-top: 56px;
+    padding-bottom: 50px;
+    width: @width-default-d;
+    margin: auto;
   }
 }
 
@@ -35,6 +37,7 @@
 
   @media (min-width: @desktop-width) {
     width: 470px;
+    padding-right: 10px;
   }
 }
 
@@ -50,5 +53,19 @@
     line-height: 30px;
     padding-top: 43px;
     padding-bottom: 54px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 43px;
+    padding-bottom: 54px;
+    margin-bottom: 30px;
+  }
+}
+
+.photo-editor__controls {
+  @media (min-width: @desktop-width) {
+    display: flex;
+    flex-direction: row;
+    padding-top: 20px;
   }
 }

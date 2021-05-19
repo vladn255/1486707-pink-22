@@ -14,7 +14,6 @@
       "app"
       "contacts"
       "adventures"
-      "review"
       "textarea"
       "submit-button";
 
@@ -25,16 +24,21 @@
   @media (min-width: @desktop-width) {
     .container;
     grid-template-columns: 1fr 1fr;
-    grid-row-gap: 74px;
+    grid-row-gap: 69px;
+    grid-column-gap: 70px;
 
     grid-template-areas:
       "intro intro"
       "personal app"
       "contacts contacts"
       "adventures adventures"
-      "review review"
       "textarea textarea"
       "submit-button submit-button";
+
+    padding-left: 0;
+    padding-right: 0;
+    padding-bottom: 0;
+    margin-bottom: -10px;
   }
 }
 
@@ -49,6 +53,12 @@
     padding-right: 30px;
 
     grid-area: intro;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-left: 0;
+    padding-right: 0;
+    max-width: 760px;
   }
 }
 
@@ -99,7 +109,6 @@
     flex-wrap: wrap;
     justify-content: start;
     align-items: start;
-    height: 228px;
   }
 }
 
@@ -148,6 +157,7 @@
 
   @media (min-width: @desktop-width) {
     width: 100%;
+    align-items: center;
   }
 }
 
@@ -155,10 +165,11 @@
   .container;
   text-align: center;
   padding-top: 36px;
-  margin: 0;
+  margin: auto;
   margin-bottom: 45px;
   border: 0;
   position: relative;
+  grid-area: textarea;
 
   .input__label {
     display: block;
@@ -172,9 +183,26 @@
     border: 2px solid @bg-lightgrey;
     padding-left: 82px;
     padding-right: 82px;
-    margin-bottom: 70px;
 
-    grid-area: textarea;
+    margin-bottom: 70px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 0;
+    padding-left: 60px;
+    padding-right: 58px;
+    padding-bottom: 35px;
+    margin-bottom: 0;
+
+    .input__label {
+      display: block;
+      background-color: @bg-white;
+      position: relative;
+      top: -20px;
+      left: 0;
+      padding-left: 25px;
+      padding-right: 25px;
+    }
   }
 }
 
@@ -193,9 +221,13 @@
 
   @media (min-width: @desktop-width) {
     width: 470px;
+    display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    justify-content: start;
+    align-items: flex-start;
     padding-right: 40px;
+    padding-left: 0;
     padding-top: 0;
   }
 }
@@ -220,6 +252,7 @@
 .form__fieldset--adventures {
   padding-top: 38px;
   padding-bottom: 45px;
+  grid-area: adventures;
 
   .form__legend {
     padding-left: 35px;
@@ -244,7 +277,30 @@
 
     .form__input {
       order: 4;
-      grid-area: adventures;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 20px;
+    padding-left: 60px;
+    padding-right: 0;
+    padding-bottom: 32px;
+
+    .form__legend {
+      padding-left: 25px;
+      padding-right: 25px;
+      top: -42px;
+      left: -30px;
+      width: 100%;
+    }
+
+    .form__list {
+      max-height: 170px;
+      row-gap: 22px;
+    }
+
+    .form__item {
+      margin-bottom: 25px;
     }
   }
 }
@@ -278,17 +334,19 @@
   @media (min-width: @desktop-width) {
     padding-right: 37px;
     padding-top: 15px;
+
+    .input__label {
+      padding-left: 0;
+    }
+
+    .input__field {
+      padding-top: 17px;
+    }
   }
 }
 
 .form__fieldset--app {
   padding-top: 38px;
-
-  .form__legend {
-    @media (min-width: @tablet-width) {
-      top: -25px;
-    }
-  }
 
   .input__label {
     font-size: @fs-title;
@@ -306,14 +364,24 @@
     grid-area: app;
 
     .form__legend {
-      @media (min-width: @tablet-width) {
-        top: -40px;
-        left: -28px;
-      }
+      top: -40px;
+      left: -28px;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-bottom: 15px;
+    padding-left: 73px;
+
+    .form__legend {
+      padding-left: 20px;
+      padding-right: 20px;
+      top: -40px;
+      left: -36px;
     }
 
-    @media (min-width: @desktop-width) {
-      padding-bottom: 15px;
+    .input {
+      margin-bottom: 19px;
     }
   }
 }
@@ -322,8 +390,14 @@
   padding-top: 33px;
   padding-bottom: 25px;
 
-  .form__legend {
-    display: none;
+  .input__label {
+    font-size: @fs-base;
+  }
+
+  @media (max-width: calc(@tablet-width - 1px)) {
+    .form__legend {
+      .visually-hidden;
+    }
   }
 
   @media (min-width: @tablet-width) {
@@ -361,13 +435,35 @@
   @media (min-width: @desktop-width) {
     width: 100%;
     display: flex;
+    flex-direction: row;
     justify-content: start;
     align-items: start;
     flex-wrap: wrap;
-  }
+    padding-right: 0;
+    padding-top: 0;
 
-  .input__label {
-    font-size: @fs-base;
+    .form__legend {
+      display: inline;
+      top: -10px;
+      left: -10px;
+      width: 100%;
+      margin-bottom: 24px;
+    }
+
+    .form__input {
+      max-width: 412px;
+      margin-right: 32px;
+    }
+
+    .form__input:not(:last-child) {
+      margin-bottom: 15px;
+    }
+
+    .input__field {
+      margin-left: 38px;
+      margin-right: 0;
+      padding-right: 0;
+    }
   }
 }
 
@@ -380,6 +476,10 @@
     content: "*";
     color: @font-red;
   }
+
+  @media (min-width: @desktop-width) {
+    font-size: @fs-base;
+  }
 }
 
 .form__intro--required-d {
@@ -388,6 +488,10 @@
 
   @media (max-width: calc(@desktop-width - 1px)) {
     display: none;
+  }
+
+  @media (min-width: @desktop-width) {
+    font-size: @fs-base;
   }
 }
 

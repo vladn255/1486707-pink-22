@@ -32,11 +32,15 @@
   position: absolute;
   top: 0;
   color: @bg-white;
+
+  @media (min-width: @desktop-width) {
+    height: 104px;
+  }
 }
 
 .map__marker {
   position: absolute;
   left: 50%;
-  top: 50%;
+  top: 56%;
   transform: translate(-50%, -50%);
 }

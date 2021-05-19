@@ -21,6 +21,11 @@
     text-align: start;
     min-height: 145px;
   }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 10px;
+    padding-left: 27px;
+  }
 }
 
 .post__author {
@@ -93,10 +98,18 @@
       left: auto;
       right: 60px;
     }
+
+    @media (min-width: @tablet-width) {
+      right: 58px;
+    }
   }
 
   @media (min-width: @tablet-width) {
     padding-left: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    left: 27px;
   }
 }
 
@@ -149,5 +162,24 @@
 
   @media (min-width: @desktop-width) {
     grid-column-end: 4;
+    margin-bottom: 0;
+
+    .post__info {
+      padding-top: 25px;
+      padding-bottom: 20px;
+    }
+
+    .post__author {
+      margin-right: 2px;
+    }
+
+    .post__likes-count {
+      padding-right: 60px;
+      top: 0;
+
+      &::before {
+        right: 30px;
+      }
+    }
   }
 }

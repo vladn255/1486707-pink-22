@@ -70,6 +70,11 @@
   @media (min-width: @tablet-width) {
     width: 300px;
   }
+
+  @media (min-width: @desktop-width) {
+    margin-left: 0;
+    margin-bottom: 0;
+  }
 }
 
 .button--popup {
@@ -97,10 +102,6 @@
 .button--post {
   margin-bottom: 15px;
 
-  @media (min-width: @tablet-width) {
-    margin-bottom: 25px;
-  }
-
   &:hover {
     background-color: @hover-red;
     color: @font-white;
@@ -110,6 +111,17 @@
     .button__title {
       opacity: 0.3;
     }
+  }
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 25px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin: 0;
+    padding-left: 0;
+    width: auto;
+    margin-right: 45px;
   }
 }
 
@@ -126,5 +138,11 @@
     background-color: @bg-darkgrey;
     color: @font-white;
     opacity: 0.3;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin: 0;
+    padding-left: 0;
+    width: auto;
   }
 }

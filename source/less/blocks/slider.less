@@ -44,10 +44,29 @@
 
 .slider--reviews {
   padding-top: 50px;
-  padding-bottom: 60px;
 
   @media (min-width: @tablet-width) {
     padding-top: 100px;
+  }
+
+  @media (min-width: @desktop-width) {
+    position: relative;
+    padding-top: 111px;
+
+    &::before {
+      content: "";
+      display: block;
+      position: absolute;
+      width: 79px;
+      height: 64px;
+      top: 0;
+      left: 430px;
+      background-image: url("../img/icons/icon-quotes.svg");
+      background-repeat: no-repeat;
+      background-position: center;
+      opacity: 0.7;
+      color: blue;
+    }
   }
 }
 
@@ -55,13 +74,13 @@
   margin: 0 auto;
 
   @media (max-width: calc(@tablet-width - 1px)) {
-    width: @mobile-width;
     overflow: hidden;
   }
 
   @media (min-width: @tablet-width) {
     padding-left: 0;
     padding-right: 0;
+    width: 100%;
 
     .slider__toggles {
       display: none;

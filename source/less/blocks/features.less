@@ -3,6 +3,21 @@
   padding-top: 43px;
   text-align: center;
   position: relative;
+  z-index: -2;
+  overflow: hidden;
+
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 0;
+    top: -100px;
+    width: 0;
+    height: 0;
+    border-right: 100vw solid @bg-lightgrey;
+    border-top: 100px solid transparent;
+    z-index: -2;
+  }
 
   @media (min-width: @tablet-width) {
     display: flex;
@@ -12,10 +27,13 @@
     padding-top: 40px;
     padding-bottom: 10px;
     margin-bottom: 53px;
+    overflow: visible;
   }
 
   @media (min-width: @desktop-width) {
-    margin-bottom: 0;
+    margin-bottom: -40px;
+    padding-top: 0;
+    padding-bottom: 10px;
   }
 }
 
@@ -28,18 +46,6 @@
   justify-content: start;
   align-items: start;
 
-  &::before {
-    content: "";
-    display: block;
-    position: absolute;
-    left: 0;
-    top: -28px;
-    width: 0;
-    height: 0;
-    border-right: 100vw solid @bg-lightgrey;
-    border-top: 30px solid transparent;
-  }
-
   @media (min-width: @tablet-width) {
     width: 53%;
     text-align: start;
@@ -50,30 +56,53 @@
   @media (min-width: @desktop-width) {
     display: flex;
     flex-direction: row;
-    justify-content: start;
+    justify-content: space-between;
     align-items: start;
     margin: auto;
     text-align: center;
-    width: 100%;
+    width: @width-default-d;
+
+    position: relative;
+    top: -95px;
+    padding-right: 0;
+    padding-left: 0;
   }
 }
 
 .features__item {
   margin-bottom: 33px;
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: @desktop-width) {
+    width: 300px;
+    margin-bottom: 0;
+  }
 }
 
 .features__item:last-child {
+  margin-bottom: 320px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 0;
+  }
+
   @media (min-width: @desktop-width) {
     margin-right: 0;
   }
 }
 
 .features__img {
-  order: -1;
+  order: 1;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+  bottom: -52px;
+  z-index: -2;
 
   @media (min-width: @tablet-width) {
-    position: absolute;
     left: 20px;
+    transform: none;
     bottom: 0;
     width: 50%;
     padding-right: 42px;
@@ -83,6 +112,8 @@
     position: static;
     padding: 0;
     margin: auto;
+    order: -1;
+    width: 100%;
   }
 }
 
@@ -101,6 +132,11 @@
   @media (min-width: @desktop-width) {
     font-size: 30px;
     line-height: 30px;
+
+    margin-top: 46px;
+    margin-bottom: 25px;
+    padding-left: 30px;
+    padding-right: 30px;
   }
 }
 
@@ -113,6 +149,9 @@
   @media (min-width: @desktop-width) {
     font-size: 18px;
     line-height: 30px;
+
+    padding-left: 30px;
+    padding-right: 30px;
   }
 }
 
