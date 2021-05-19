@@ -30,15 +30,17 @@
     text-transform: none;
     font-weight: normal;
     line-height: 18px;
-    padding-top: 49px;
-    margin-right: 85px;
+    padding-top: 45px;
+    margin-right: 80px;
     box-shadow: none;
+    padding-bottom: 10px;
   }
 }
 
 .site-list__item:last-child {
   @media (min-width: @desktop-width) {
-    margin-right: 0;
+    margin-right: 10px;
+    white-space: nowrap;
   }
 }
 
@@ -47,4 +49,23 @@
   margin: auto;
   text-align: center;
   color: @font-white;
+
+  &[href]:hover {
+    color: @hover-red;
+  }
+
+  &[href]:active {
+    opacity: 0.3;
+    color: @down-red;
+
+    @media (min-width: @desktop-width) {
+      color: @static-white;
+    }
+  }
+}
+
+.site-list__item--active {
+  @media (min-width: @desktop-width) {
+    border-bottom: 2px solid @font-white;
+  }
 }

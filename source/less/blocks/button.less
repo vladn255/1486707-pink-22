@@ -1,11 +1,7 @@
 .button {
   display: block;
   box-sizing: border-box;
-
-  padding-top: 21px;
-  padding-bottom: 21px;
-  padding-left: 58px;
-  padding-right: 59px;
+  cursor: pointer;
 
   font-weight: bold;
   font-size: @fs-title;
@@ -36,9 +32,117 @@
   }
 }
 
-.button--submit {
-  background-color: @hover-green;
-  border: 2px solid @hover-green;
+.button--submit,
+.button--popup {
+  background-color: @static-green;
+  border: 2px solid @static-green;
   border-radius: 1px;
   color: @font-white;
+  text-transform: uppercase;
+  margin-left: auto;
+  margin-right: auto;
+  width: @mobile-width;
+
+  &:hover {
+    background-color: @hover-green;
+  }
+
+  &:active {
+    .button__title {
+      opacity: 0.3;
+    }
+  }
+
+  &:disabled {
+    background-color: @bg-black;
+    opacity: 0.1;
+    border: none;
+  }
+}
+
+.button--submit {
+  min-height: 63px;
+  padding: 0;
+  width: 280px;
+  margin: auto;
+  margin-bottom: 34px;
+
+  @media (min-width: @tablet-width) {
+    width: 300px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-left: 0;
+    margin-bottom: 0;
+  }
+}
+
+.button--popup {
+  @media (min-width: @tablet-width) {
+    width: 300px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 460px;
+  }
+}
+
+.button--post,
+.button--reset {
+  width: 100%;
+  padding-top: 15px;
+  padding-bottom: 15px;
+
+  @media (min-width: @tablet-width) {
+    margin-left: 10px;
+    width: 260px;
+  }
+}
+
+.button--post {
+  margin-bottom: 15px;
+
+  &:hover {
+    background-color: @hover-red;
+    color: @font-white;
+  }
+
+  &:active {
+    .button__title {
+      opacity: 0.3;
+    }
+  }
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 25px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin: 0;
+    padding-left: 0;
+    width: auto;
+    margin-right: 45px;
+  }
+}
+
+.button--reset {
+  opacity: 0.1;
+  color: @bg-darkgrey;
+  border: 2px solid @bg-darkgrey;
+
+  &:hover {
+    opacity: 0.3;
+  }
+
+  &:active {
+    background-color: @bg-darkgrey;
+    color: @font-white;
+    opacity: 0.3;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin: 0;
+    padding-left: 0;
+    width: auto;
+  }
 }

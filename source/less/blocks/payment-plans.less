@@ -1,6 +1,21 @@
 .payment-plans {
+  position: relative;
   text-transform: uppercase;
   background-color: @bg-lightgrey;
+  padding-bottom: 48px;
+  padding-top: 76px;
+
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 0;
+    top: -100px;
+    width: 0;
+    height: 0;
+    border-right: 100vw solid @bg-lightgrey;
+    border-top: 100px solid transparent;
+  }
 
   @media (min-width: @tablet-width) {
     padding-top: 70px;
@@ -8,8 +23,8 @@
   }
 
   @media (min-width: @desktop-width) {
-    padding-top: 107px;
-    padding-bottom: 95px;
+    padding-top: 55px;
+    padding-bottom: 100px;
   }
 }
 
@@ -17,13 +32,24 @@
   display: block;
   position: absolute;
   width: 100%;
-  left: 20px;
+  left: -110px;
+  top: 12px;
   transform: rotate(-45deg);
 
   font-size: @fs-base;
   text-align: center;
   color: @font-white;
   background-color: @bg-red;
+
+  @media (min-width: @tablet-width) {
+    left: -60px;
+    top: 10px;
+  }
+
+  @media (min-width: @tablet-width) {
+    left: -90px;
+    top: 10px;
+  }
 }
 
 .payment-plans__category {
@@ -44,6 +70,7 @@
 .payment-plans__price {
   font-weight: normal;
   font-size: @fs-title;
+  line-height: @lh-title;
   text-align: center;
 
   margin: 0;

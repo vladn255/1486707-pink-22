@@ -1,13 +1,31 @@
 .copyright {
   text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .copyright__text {
   font-weight: normal;
   font-size: @fs-base;
   line-height: @lh-base;
+  margin-right: 15px;
+
+  @media (min-width: @desktop-width) {
+    font-size: @fs-title;
+  }
 }
 
 .copyright__link {
-  color: @font-black;
+  color: @font-red;
+  padding-top: 12px;
+
+  &[href]:hover {
+    color: @font-black;
+  }
+
+  &[href]:active {
+    color: @font-black;
+    opacity: 0.3;
+  }
 }

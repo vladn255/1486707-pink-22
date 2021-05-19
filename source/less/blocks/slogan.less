@@ -1,9 +1,46 @@
 .slogan {
-  padding-top: 46px;
+  padding-top: 42px;
   padding-bottom: 70px;
+  position: relative;
+
+  .page-title {
+    font-size: @fs-big;
+  }
+
+  .page-title:nth-child(1) {
+    margin-bottom: 28px;
+  }
 
   @media (min-width: @tablet-width) {
-    padding-top: 58px;
-    padding-bottom: 19px;
+    padding-top: 45px;
+
+    .page-title {
+      font-size: 40px;
+      line-height: 54px;
+    }
+
+    .page-title:nth-child(1) {
+      font-size: 38px;
+      line-height: 54px;
+      margin-bottom: 0;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 60px;
+    margin-bottom: 85px;
+
+    .page-title {
+      font-size: 50px;
+      line-height: 68px;
+      max-width: 500px;
+    }
+
+    .page-title:nth-child(1) {
+      font-size: 50px;
+      line-height: 68px;
+      margin-bottom: 0;
+      max-width: 100%;
+    }
   }
 }

@@ -1,9 +1,11 @@
 .posts {
+  padding-top: 45px;
   text-align: center;
 
   @media (min-width: @tablet-width) {
-    row-gap: 20px;
     padding-top: 91px;
+    padding-left: 0;
+    padding-right: 0;
   }
 }
 
@@ -11,7 +13,10 @@
   font-size: @fs-base;
   text-align: center;
   padding: 0;
-  margin: 0;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin: auto;
+  margin-bottom: 50px;
   grid-area: posts__intro;
 
   @media (min-width: @tablet-width) {
@@ -24,9 +29,11 @@
   }
 
   @media (min-width: @desktop-width) {
-    padding-left: 150px;
-    padding-right: 155px;
-    padding-bottom: 88px;
+    margin-bottom: 0;
+    padding-bottom: 90px;
+    padding-left: 0;
+    padding-right: 0;
+    max-width: 580px;
   }
 }
 
@@ -47,11 +54,52 @@
 
     grid-row-gap: 54px;
     grid-column-gap: 20px;
+
+    padding-left: 0;
+    padding-right: 0;
   }
 }
 
-.posts__item {
+.posts__post-of-the-day {
+  position: relative;
+  line-height: 0;
+}
+
+.posts__post-of-the-day-photo {
+  img {
+    width: 100%;
+  }
+}
+
+.posts__post-of-the-day-frame {
+  font-size: 12px;
+  line-height: @lh-title;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: @font-white;
+  background-color: @bg-red;
+
+  text-align: center;
+  vertical-align: middle;
+  padding-top: 13px;
+  padding-right: 20px;
+  padding-bottom: 14px;
+  padding-left: 20px;
+
+  position: absolute;
+  top: 0;
+  right: 10px;
+  width: fit-content;
+
   @media (min-width: @tablet-width) {
-    padding-bottom: 15px;
+    line-height: 10px;
+    top: 55px;
+  }
+
+  @media (min-width: @desktop-width) {
+    line-height: 10px;
+    top: 55px;
+    left: 50%;
+    transform: translate(330px);
   }
 }

@@ -3,16 +3,54 @@
   display: flex;
   justify-content: start;
   align-items: start;
+  margin: 0;
+  margin-top: 30px;
+  margin-bottom: 25px;
+  padding-left: 50px;
+
+  @media (min-width: @tablet-width) {
+    padding-left: 0;
+    padding-right: 15px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-top: 35px;
+    padding-left: 0;
+    padding-right: 0;
+  }
 }
 
 .socials__item {
-  margin-right: 14px;
+  margin-right: 10px;
+
+  &:active {
+    opacity: 0.3;
+
+    .socials__circle {
+      opacity: 0.1;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-right: 5px;
+  }
 }
 
 .socials__item:last-child {
   margin-right: 0;
 }
 
-.solcials__link {
+.socials__link {
   color: @static-red;
+
+  &[href]:hover {
+    .socials__circle {
+      opacity: 1;
+    }
+  }
+}
+
+.socials__circle {
+  color: @bg-darkgrey;
+  opacity: 0.1;
 }

@@ -1,5 +1,12 @@
 .page-header {
-  background-color: @bg-darkgrey;
+  background-color: fade(@bg-black, 40%);
+  position: relative;
+  z-index: 2;
+
+  @media (min-width: @desktop-width) {
+    width: 100%;
+    margin: auto;
+  }
 }
 
 .page-header__logo {
@@ -9,16 +16,18 @@
   align-items: center;
   padding-left: 20px;
   padding-right: 20px;
-  padding-top: 10px;
-  padding-bottom: 10px;
+  padding-top: 9px;
+  padding-bottom: 9px;
 
   @media (min-width: @tablet-width) {
-    padding-top: 43px;
-    padding-bottom: 43px;
+    padding-top: 30px;
+    padding-bottom: 32px;
   }
 
   @media (min-width: @desktop-width) {
-    margin-right: 225px;
+    margin-right: 0;
+    padding-top: 28px;
+    padding-left: 10px;
   }
 }
 
@@ -26,35 +35,26 @@
   text-transform: uppercase;
   color: @font-white;
   font-weight: bold;
-}
 
-.page-header__logo-toggle {
-  border: none;
-  outline: none;
-  padding: 0;
-  width: 50px;
-  height: 24px;
-  background-color: inherit;
+  &[href]:hover {
+    color: @hover-red;
+  }
 
-  @media (min-width: @desktop-width) {
-    display: none;
+  &[href]:active {
+    opacity: 0.3;
+    color: @bg-white;
   }
 }
 
-.page-header__logo-toggle > div,
-.page-header__logo-toggle > div::before,
-.page-header__logo-toggle > div::after {
+.page-header__toggle {
   display: block;
-  position: absolute;
-  top: 50%;
-  right: 0;
-  height: 3px;
-  width: 50px;
-  background-color: @bg-white;
+  border: none;
+  outline: none;
+  padding: 0;
+  background-color: inherit;
   margin-right: 20px;
-}
+  margin-top: 5px;
 
-.page-header__logo-toggle > div {
   &::before,
   &::after {
     margin-right: 0;
@@ -62,15 +62,49 @@
   }
 
   &::before {
-    top: -8px;
+    top: -10px;
   }
 
   &::after {
-    top: 8px;
+    top: 10px;
+  }
+
+  &:hover {
+    background-color: @hover-red;
+
+    &::before,
+    &::after {
+      background-color: @hover-red;
+    }
+  }
+
+  &:active {
+    opacity: 0.3;
+    background-color: @down-red;
+
+    &::before,
+    &::after {
+      opacity: 0.3;
+      background-color: @down-red;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    display: none;
   }
 }
 
-.main-nav--opened .page-header__logo-toggle > div {
+.page-header__toggle,
+.page-header__toggle::before,
+.page-header__toggle::after {
+  position: absolute;
+  right: 0;
+  height: 3px;
+  width: 50px;
+  background-color: @bg-white;
+}
+
+.main-nav--opened .page-header__toggle {
   height: 0;
 
   @media (max-width: @desktop-width) {
@@ -92,6 +126,31 @@
 
     &::after {
       transform: rotate(-45deg);
+    }
+  }
+}
+
+.page-header__toggle-wrapper {
+  width: 50px;
+  height: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &:hover {
+    .page-header__toggle,
+    .page-header__toggle::before,
+    .page-header__toggle::after {
+      background-color: @hover-red;
+    }
+  }
+
+  &:active {
+    .page-header__toggle,
+    .page-header__toggle::before,
+    .page-header__toggle::after {
+      opacity: 0.3;
+      background-color: @down-red;
     }
   }
 }
