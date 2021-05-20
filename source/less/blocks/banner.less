@@ -6,7 +6,7 @@
   background-position-y: top;
   background-repeat: no-repeat;
   background-size: cover;
-  min-height: 175px;
+  min-height: 240px;
   padding-top: 100px;
   padding-bottom: 44px;
 
@@ -15,7 +15,7 @@
   }
 
   @media (min-width: @tablet-width) {
-    min-height: 335px;
+    min-height: 443px;
     box-sizing: border-box;
     padding-left: 0;
     padding-right: 0;
@@ -136,26 +136,33 @@
 
 .banner--index {
   padding-top: 67px;
+  padding-bottom: 0;
 
   .banner__wrapper {
     padding-top: 25px;
-
-    @media (min-width: @desktop-width) {
-      padding-top: 43px;
-      padding-left: 0;
-      padding-right: 0;
-      padding-bottom: 122px;
-    }
   }
 
   @media (min-width: @tablet-width) {
     text-align: start;
     padding-left: 0;
     padding-right: 0;
+
+    .banner__wrapper {
+      padding-top: 70px;
+      padding-left: 0;
+      padding-right: 0;
+    }
   }
 
   @media (min-width: @desktop-width) {
     padding-top: 110px;
     padding-bottom: 0;
+
+    .banner__wrapper {
+      padding-top: 43px;
+      padding-left: 0;
+      padding-right: 0;
+      padding-bottom: 122px;
+    }
   }
 }

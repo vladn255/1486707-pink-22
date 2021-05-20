@@ -2,9 +2,13 @@
   width: 100%;
   text-align: center;
   background-color: @bg-white;
+  padding-top: 18px;
 
   position: fixed;
   z-index: 5;
+
+  box-shadow: 0px 7px 15px @popup-shadow;
+  border-radius: 1px;
 
   @media (min-width: @tablet-width) {
     width: 460px;
@@ -20,6 +24,7 @@
 .popup__title {
   font-size: @fs-title;
   line-height: @lh-title;
+  margin-bottom: 25px;
 
   @media (min-width: @tablet-width) {
     font-size: 30px;
@@ -40,6 +45,7 @@
   width: @width-default-m;
   margin-left: auto;
   margin-right: auto;
+  margin-bottom: 10px;
 
   @media (min-width: @tablet-width) {
     width: 300px;
@@ -51,26 +57,83 @@
 }
 
 .popup--failure {
-  top: 40%;
-}
+  top: 15%;
 
-.popup--success {
-  top: 70%;
-}
-
-.popup--failure .popup__button-wrapper {
-  padding-top: 52px;
-  padding-bottom: 52px;
+  @media (min-width: @tablet-width) {
+    .popup__title {
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+  }
 
   @media (min-width: @desktop-width) {
-    background-color: @bg-lightgrey;
+    .button--popup {
+      width: 300px;
+    }
+
+    .popup__text-wrapper {
+      margin-bottom: 60px;
+    }
+
+    .popup__button-wrapper {
+      background-color: @bg-lightgrey;
+      padding-top: 51px;
+      padding-bottom: 28px;
+    }
   }
 }
 
-.popup--success .popup__button-wrapper {
-  background-color: @bg-lightgrey;
-  padding-top: 52px;
+.popup--success {
+  top: 60%;
+
+  .popup__text {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .popup__text-wrapper {
+    margin-bottom: 55px;
+  }
+
+  .popup__button-wrapper {
+    background-color: @bg-lightgrey;
+  }
+
+  @media (min-width: @tablet-width) {
+    .popup__title {
+      margin-top: 22px;
+    }
+
+    .popup__text {
+      padding-left: 0;
+      padding-right: 0;
+    }
+
+    .popup__text-wrapper {
+      margin-bottom: 27px;
+    }
+
+    .popup__button-wrapper {
+      padding-top: 51px;
+      padding-bottom: 28px;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    .popup__text-wrapper {
+      margin-bottom: 35px;
+    }
+  }
+}
+
+.popup__button-wrapper {
+  padding-top: 28px;
   padding-bottom: 52px;
+
+  @media (min-width: @tablet-width) {
+    padding-top: 12px;
+    padding-bottom: 33px;
+  }
 }
 
 .popup--closed {

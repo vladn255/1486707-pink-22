@@ -6,11 +6,13 @@
   padding-right: @padding-lr-default;
   width: @width-default-m;
   margin: auto;
+  padding-bottom: 10px;
 
   @media (min-width: @tablet-width) {
     width: @width-default-t;
     padding-left: 0;
     padding-right: 0;
+    padding-bottom: 27px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -57,6 +59,10 @@
 }
 
 .contacts__container--first {
+  @media (min-width: @tablet-width) {
+    margin-bottom: 0;
+  }
+
   @media (min-width: @desktop-width) {
     order: -2;
   }

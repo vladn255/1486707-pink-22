@@ -18,7 +18,7 @@
       "submit-button";
 
     padding-top: 40px;
-    padding-bottom: 56px;
+    padding-bottom: 20px;
   }
 
   @media (min-width: @desktop-width) {
@@ -183,8 +183,17 @@
     border: 2px solid @bg-lightgrey;
     padding-left: 82px;
     padding-right: 82px;
+    padding-top: 12px;
+    margin-bottom: 38px;
 
-    margin-bottom: 70px;
+    .input__label {
+      position: relative;
+      display: inline;
+      background-color: @bg-white;
+      padding-left: 25px;
+      padding-right: 25px;
+      top: -23px;
+    }
   }
 
   @media (min-width: @desktop-width) {
@@ -269,10 +278,14 @@
   }
 
   @media (min-width: @tablet-width) {
+    padding-top: 16px;
+    padding-left: 60px;
+
     .form__legend {
       padding-left: 25px;
       padding-right: 25px;
-      top: -55px;
+      top: -40px;
+      left: -20px;
     }
 
     .form__input {
@@ -311,7 +324,11 @@
 
 .form__fieldset--name {
   padding-top: 37px;
-  padding-bottom: 25px;
+  padding-bottom: 45px;
+
+  .input:not(:last-child) {
+    margin-bottom: 20px;
+  }
 
   @media (min-width: @tablet-width) {
     padding-top: 0;
@@ -353,6 +370,10 @@
     padding-left: 0;
   }
 
+  .form__legend {
+    padding-bottom: 36px;
+  }
+
   .input {
     margin-bottom: 38px;
   }
@@ -388,7 +409,11 @@
 
 .form__fieldset--contacts {
   padding-top: 33px;
-  padding-bottom: 25px;
+  padding-bottom: 46px;
+
+  .form__input:not(:last-child) {
+    margin-bottom: 22px;
+  }
 
   .input__label {
     font-size: @fs-base;
@@ -405,7 +430,7 @@
     padding-left: 20px;
     padding-right: 50px;
     padding-top: 15px;
-    padding-bottom: 0;
+    padding-bottom: 30px;
     grid-area: contacts;
 
     .form__input:not(:last-child) {

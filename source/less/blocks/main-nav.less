@@ -20,9 +20,13 @@
   }
 }
 
-.main-nav--opened .main-nav__wrapper {
+.main-nav--opened {
+  background-color: @bg-darkgrey;
+
   @media (max-width: @desktop-width) {
-    display: block;
+    .main-nav__wrapper {
+      display: block;
+    }
   }
 }
 

@@ -5,7 +5,10 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>HTML Academy: Пинк</title>
-  <link href="css/style.css" rel="stylesheet">
+  <link href="css/style.min.css" rel="stylesheet">
+  <link rel="preload" href="fonts/opensans.woff2" as="font">
+  <link rel="preload" href="fonts/opensansbold.woff2" as="font">
+  <link rel="preload" href="fonts/opensanslight.woff2" as="font">
 </head>
 
 <body class="page">
@@ -66,7 +69,8 @@
 
     <section class="banner">
       <h1 class="banner__text page-title page-title--white container">
-        Фотографии\nпользователей
+        Фотографии
+        пользователей
       </h1>
     </section>
 
@@ -233,7 +237,7 @@
     <section class="photo-editor">
       <h2 class="visually-hidden">Photo editor</h2>
       <p class="photo-editor__text container">
-        Затмите их всех!/nВыкладывайте все, что накопилось в телефоне!
+        Затмите их всех!<br>Выкладывайте все, что накопилось в телефоне!
       </p>
       <div class="photo-editor__wrapper ">
         <picture class="photo-editor__photo">
@@ -252,8 +256,7 @@
               </svg>
               <input class="radio__input visually-hidden" type="radio" name="edit-tool" id="radio-crop" value="crop"
                 checked>
-              <label class="radio__label" for id="radio-crop"></label>
-              </label>
+              <label class="radio__label" for="radio-crop"></label>
               <input class="tools-set__range" type="range">
             </li>
             <li class="tools-set__item radio radio--hidden">
@@ -261,8 +264,7 @@
                 <use xlink:href="./img/sprite.svg#editor-fill"></use>
               </svg>
               <input class="radio__input visually-hidden" type="radio" name="edit-tool" id="radio-fill" value="fill">
-              <label class="radio__label " for id="radio-fill"></label>
-              </label>
+              <label class="radio__label " for="radio-fill"></label>
               <input class="tools-set__range" type="range">
             </li>
             <li class="tools-set__item radio radio--hidden">
@@ -271,8 +273,7 @@
               </svg>
               <input class="radio__input visually-hidden" type="radio" name="edit-tool" id="radio-contrast"
                 value="contrast">
-              <label class="radio__label" for id="radio-fill"></label>
-              </label>
+              <label class="radio__label" for="radio-fill"></label>
               <input class="tools-set__range" type="range">
             </li>
           </ul>
@@ -340,7 +341,7 @@
       </a>
     </div>
   </footer>
-  <script src="./js/toggle-menu.js"></script>
+  <script src="./script.min.js"></script>
 </body>
 
 </html>

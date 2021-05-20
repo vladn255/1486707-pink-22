@@ -1,16 +1,16 @@
 .table {
   border-collapse: collapse;
   width: calc(280px * 4);
-  transform: translate(-51%);
+  transform: translate(-50%);
   margin-bottom: 40px;
 
   @media (min-width: @tablet-width) {
     margin: auto;
-    width: 100%;
+    width: @width-default-t;
     transform: none;
   }
 
-  @media (min-width: @tablet-width) {
+  @media (min-width: @desktop-width) {
     margin: auto;
     width: @width-default-d;
     transform: none;
@@ -23,7 +23,9 @@
   border: 2px solid @bg-lightgrey;
   box-sizing: border-box;
   padding-top: 10px;
-  padding-bottom: 15px;
+  padding-bottom: 12px;
+  padding-left: 10px;
+  padding-right: 10px;
 
   @media (min-width: @tablet-width) {
     min-width: 152px;
@@ -39,9 +41,12 @@
 .table__headline {
   background-color: @bg-darkgrey;
   color: @font-white;
+  border-right: 1px solid @bg-lightgrey;
 }
 
 .table__text {
+  padding-left: 15px;
+
   @media (min-width: @tablet-width) {
     padding-top: 6px;
     padding-bottom: 11px;
@@ -109,7 +114,8 @@
 .table__data--yes {
   background-image: url("../img/icons/icon-yes.svg");
   background-repeat: no-repeat;
-  background-position: center right;
+  background-position-y: center;
+  background-position-x: 230px;
 
   @media (min-width: @tablet-width) {
     background-position: center center;
@@ -119,7 +125,8 @@
 .table__data--no {
   background-image: url("../img/icons/icon-no.svg");
   background-repeat: no-repeat;
-  background-position: center right;
+  background-position-y: center;
+  background-position-x: 228px;
 
   @media (min-width: @tablet-width) {
     background-position: center center;
