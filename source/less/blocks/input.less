@@ -23,6 +23,7 @@
   display: block;
 
   outline: none;
+  transition: all 0.2s;
 
   &:hover {
     border: 2px solid @bg-black;
@@ -56,8 +57,8 @@
   min-height: 200px;
 
   @media (min-width: @tablet-width) {
-    padding-left: 0;
     padding-right: 0;
+    padding-bottom: 10px;
   }
 
   @media (min-width: @desktop-width) {
@@ -66,9 +67,7 @@
 }
 
 .input__icon-wrapper {
-  @media (max-width: calc(@tablet-width - 1px)) {
-    display: none;
-  }
+  display: none;
 
   @media (min-width: @tablet-width) {
     display: flex;
@@ -88,6 +87,8 @@
 
 .input__label--checkbox {
   padding-left: 0;
+  transition: all 0.2s;
+  cursor: pointer;
 
   &:hover {
     &::before {
@@ -120,6 +121,9 @@
 }
 
 .input__label--radio {
+  transition: all 0.2s;
+  cursor: pointer;
+
   &:hover {
     &::before {
       border-color: @bullet-grey;

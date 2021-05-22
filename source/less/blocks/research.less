@@ -85,6 +85,16 @@
   line-height: 24px;
   color: @font-red;
   text-decoration-line: underline;
+  transition: all 0.2s;
+
+  &[href]:hover {
+    color: @font-black;
+  }
+
+  &[href]:active {
+    color: @font-black;
+    opacity: 0.3;
+  }
 
   @media (min-width: @desktop-width) {
     font-size: 18px;

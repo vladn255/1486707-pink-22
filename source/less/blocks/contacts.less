@@ -23,7 +23,8 @@
     width: @width-default-d;
     padding-top: 60px;
     justify-content: space-between;
-    margin-bottom: 17px;
+    padding-bottom: 16px;
+    margin-bottom: 0;
   }
 }
 
@@ -56,6 +57,17 @@
   line-height: @lh-big;
   color: @font-red;
   font-style: inherit;
+  transition: all 0.2s;
+
+  &[href]:hover {
+    color: @font-black;
+    border-bottom: 2px solid @font-black;
+  }
+
+  &[href]:active {
+    color: @font-black;
+    opacity: 0.3;
+  }
 }
 
 .contacts__container--first {
@@ -71,17 +83,5 @@
 .contacts__container--second {
   @media (min-width: @desktop-width) {
     order: -1;
-  }
-}
-
-.contacts__text--link {
-  &[href]:hover {
-    color: @font-black;
-    border-bottom: 2px solid @font-black;
-  }
-
-  &[href]:active {
-    color: @font-black;
-    opacity: 0.3;
   }
 }

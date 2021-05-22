@@ -6,7 +6,7 @@
     display: grid;
     justify-items: stretch;
     grid-template-columns: 1fr;
-    grid-row-gap: 70px;
+    grid-row-gap: 50px;
 
     grid-template-areas:
       "intro"
@@ -24,7 +24,6 @@
   @media (min-width: @desktop-width) {
     .container;
     grid-template-columns: 1fr 1fr;
-    grid-row-gap: 69px;
     grid-column-gap: 70px;
 
     grid-template-areas:
@@ -51,6 +50,7 @@
     line-height: 30px;
     padding-left: 30px;
     padding-right: 30px;
+    margin-bottom: 20px;
 
     grid-area: intro;
   }
@@ -95,6 +95,8 @@
     background-color: @bg-white;
     padding-left: 25px;
     padding-right: 25px;
+    top: 0;
+    left: 0;
   }
 }
 
@@ -181,10 +183,12 @@
   @media (min-width: @tablet-width) {
     order: 5;
     border: 2px solid @bg-lightgrey;
-    padding-left: 82px;
-    padding-right: 82px;
-    padding-top: 12px;
-    margin-bottom: 38px;
+    padding-left: 54px;
+    padding-right: 59px;
+    padding-top: 14px;
+    padding-bottom: 36px;
+    margin-bottom: 16px;
+    margin-top: 18px;
 
     .input__label {
       position: relative;
@@ -192,7 +196,7 @@
       background-color: @bg-white;
       padding-left: 25px;
       padding-right: 25px;
-      top: -23px;
+      top: -30px;
     }
   }
 
@@ -242,7 +246,7 @@
 }
 
 .form__fieldset--grey {
-  @media (max-width: calc(@tablet-width - 1px)) {
+  @media (max-width: 659px) {
     background-color: @bg-lightgrey;
     margin: 0;
     padding-left: 0;
@@ -253,7 +257,7 @@
 
 .form__fieldset--grey .form__legend,
 .form__fieldset--grey .form__list {
-  @media (max-width: calc(@tablet-width - 1px)) {
+  @media (max-width: 659px) {
     .container;
   }
 }
@@ -266,7 +270,8 @@
   .form__legend {
     padding-left: 35px;
     padding-right: 35px;
-    margin-bottom: 40px;
+    margin-bottom: 60px;
+    position: relative;
   }
 
   .form__input {
@@ -280,12 +285,13 @@
   @media (min-width: @tablet-width) {
     padding-top: 16px;
     padding-left: 60px;
+    margin-top: 5px;
+    padding-bottom: 50px;
 
     .form__legend {
       padding-left: 25px;
       padding-right: 25px;
-      top: -40px;
-      left: -20px;
+      margin-bottom: 30px;
     }
 
     .form__input {
@@ -295,21 +301,19 @@
 
   @media (min-width: @desktop-width) {
     padding-top: 20px;
-    padding-left: 60px;
+    padding-left: 0;
     padding-right: 0;
     padding-bottom: 32px;
 
     .form__legend {
       padding-left: 25px;
       padding-right: 25px;
-      top: -42px;
-      left: -30px;
-      width: 100%;
     }
 
     .form__list {
       max-height: 170px;
       row-gap: 22px;
+      padding-left: 60px;
     }
 
     .form__item {
@@ -324,7 +328,7 @@
 
 .form__fieldset--name {
   padding-top: 37px;
-  padding-bottom: 45px;
+  padding-bottom: 30px;
 
   .input:not(:last-child) {
     margin-bottom: 20px;
@@ -335,7 +339,7 @@
     padding-bottom: 0;
     padding-left: 0;
     padding-right: 0;
-    margin: 0;
+    margin: auto;
     order: 1;
     grid-area: personal;
 
@@ -344,13 +348,13 @@
     }
 
     .input__label {
-      padding-left: 20px;
+      padding-left: 0;
     }
   }
 
   @media (min-width: @desktop-width) {
-    padding-right: 37px;
-    padding-top: 15px;
+    padding-top: 18px;
+    margin-top: 5px;
 
     .input__label {
       padding-left: 0;
@@ -371,7 +375,8 @@
   }
 
   .form__legend {
-    padding-bottom: 36px;
+    padding-top: 34px;
+    background-color: inherit;
   }
 
   .input {
@@ -380,29 +385,33 @@
 
   @media (min-width: @tablet-width) {
     order: 2;
-    padding-top: 25px;
+    padding-top: 0;
     padding-left: 60px;
+    padding-bottom: 20px;
     grid-area: app;
 
     .form__legend {
-      top: -40px;
-      left: -28px;
+      padding-top: 0;
+      margin-bottom: 47px;
     }
   }
 
   @media (min-width: @desktop-width) {
     padding-bottom: 15px;
-    padding-left: 73px;
+    padding-left: 0;
+    margin-top: 0;
 
     .form__legend {
       padding-left: 20px;
       padding-right: 20px;
-      top: -40px;
-      left: -36px;
     }
 
     .input {
-      margin-bottom: 19px;
+      margin-bottom: 40px;
+    }
+
+    .form__list {
+      padding-left: 74px;
     }
   }
 }
@@ -419,7 +428,7 @@
     font-size: @fs-base;
   }
 
-  @media (max-width: calc(@tablet-width - 1px)) {
+  @media (max-width: 659px) {
     .form__legend {
       .visually-hidden;
     }
@@ -432,6 +441,7 @@
     padding-top: 15px;
     padding-bottom: 30px;
     grid-area: contacts;
+    margin-top: 5px;
 
     .form__input:not(:last-child) {
       margin-bottom: 30px;
@@ -439,8 +449,7 @@
 
     .form__legend {
       display: inline;
-      top: -30px;
-      left: 15px;
+      margin-bottom: 20px;
     }
 
     .input__label {
@@ -466,13 +475,11 @@
     flex-wrap: wrap;
     padding-right: 0;
     padding-top: 0;
+    padding-bottom: 0;
 
     .form__legend {
       display: inline;
-      top: -10px;
-      left: -10px;
-      width: 100%;
-      margin-bottom: 24px;
+      margin-bottom: 30px;
     }
 
     .form__input {
@@ -502,6 +509,11 @@
     color: @font-red;
   }
 
+  @media (min-width: @tablet-width) {
+    font-size: @fs-base;
+    margin-top: 18px;
+  }
+
   @media (min-width: @desktop-width) {
     font-size: @fs-base;
   }
@@ -511,7 +523,7 @@
   padding-left: 0;
   padding-right: 0;
 
-  @media (max-width: calc(@desktop-width - 1px)) {
+  @media (max-width: 1199px) {
     display: none;
   }
 

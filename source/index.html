@@ -16,7 +16,7 @@
   <header class="page-header">
     <nav class="main-nav main-nav--nojs">
       <div class="page-header__logo">
-        <a class="page-header__logo-link" href="index.html">
+        <a class="page-header__logo-link" href="#">
           <svg class="logo logo--header" width="146px" height="40px" aria-label="pink logo link">
             <g class="logo__title">
               <use xlink:href="./img/sprite.svg#icon-logo-title"></use>
@@ -81,17 +81,17 @@
           </a>
           <ul class="download-info__platforms-list">
             <li class="download-info__platforms-item">
-              <a class="download-info__platforms-link" href="#">
+              <a class="download-info__platforms-link" href="https://www.apple.com/ru/app-store/">
                 <img src="./img/icons/logo-apple.svg" class="download-info__img" alt="apple picture">
               </a>
             </li>
             <li class="download-info__platforms-item">
-              <a class="download-info__platforms-link" href="#">
+              <a class="download-info__platforms-link" href="https://play.google.com/store?hl=ru&gl=US">
                 <img src="./img/icons/logo-android.svg" class="download-info__img" alt="android picture">
               </a>
             </li>
             <li class="download-info__platforms-item">
-              <a class="download-info__platforms-link" href="#">
+              <a class="download-info__platforms-link" href="https://www.microsoft.com/ru-ru">
                 <img src="./img/icons/logo-microsoft.svg" class="download-info__img" alt="microsoft picture">
               </a>
             </li>
@@ -167,7 +167,7 @@
           alt="stopwatch with number 24 in it">
         <div class="research__wrapper">
           <h2 class="research__title">
-            Эффект <br class="research__break">на 24 часа!
+            Эффект&nbsp<br class="research__break">на 24 часа!
           </h2>
           <p class="research__text">
             Британские ученые провели исследования и доказали, что положительный эффект от использования приложения
@@ -181,6 +181,11 @@
 
     <div class="reviews container">
       <div class="slider slider--reviews">
+        <button class="slider__button slider__button--left">
+          <svg width="22px" height="42px" aria-label="slide left">
+            <use xlink:href="./img/sprite.svg#arrow-left"></use>
+          </svg>
+        </button>
         <blockquote class="slider__item reviews__item">
           <cite class="reviews__author">
             Николай Петров
@@ -191,6 +196,11 @@
           </p>
           <span class="reviews__author-bio">25 лет, водитель трамвая</span>
         </blockquote>
+        <button class="slider__button slider__button--right">
+          <svg width="22px" height="42px" aria-label="slide left">
+            <use xlink:href="./img/sprite.svg#arrow-right"></use>
+          </svg>
+        </button>
         <div class="slider__toggles">
           <button class="slider__toggle slider__toggle--current" type="button"></button>
           <button class="slider__toggle" type="button"></button>
@@ -295,7 +305,7 @@
       </div>
       <div class="contacts__container">
         <h4 class="contacts__title">Пишите:</h4>
-        <a class="contacts__text contacts__text--link" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
+        <a class="contacts__text" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
       </div>
       <div class="contacts__container contacts__container--first">
         <h4 class="contacts__title">Приезжайте в гости:</h4>
@@ -307,28 +317,13 @@
         preserveAspectRatio="none">
         <polygon fill="currentColor" points="297.64,61.905 0,0 595.28,0 " />
       </svg>
-      <picture class="map__image">
-        <source type="image/webp" media="(min-width: 1200px)"
-          srcset="./img/map/desktop/bg-map-desktop@1x.webp 1x, ./img/map/desktop/bg-map-desktop@2x.webp 2x">
-        <source type="image/webp" media="(min-width: 660px)"
-          srcset="./img/map/tablet/bg-map-tablet@1x.webp 1x, ./img/map/tablet/bg-map-tablet@2x.webp 2x">
-        <source type="image/webp"
-          srcset="./img/map/mobile/bg-map-mobile@1x.webp 1x, ./img/map/mobile/bg-map-mobile@2x.webp 2x">
-        <source media="(min-width: 1200px)"
-          srcset="./img/map/desktop/bg-map-desktop@1x.jpg 1x, ./img/map/desktop/bg-map-desktop@2x.jpg 2x">
-        <source media="(min-width: 660px)"
-          srcset="./img/map/tablet/bg-map-tablet@1x.jpg 1x, ./img/map/tablet/bg-map-tablet@2x.jpg 2x">
-        <img src="./img/map/mobile/bg-map-mobile@1x.png" srcset="./img/map/mobile/bg-map-mobile@2x.jpg 2x"
-          alt="map to the studio">
-      </picture>
-      <svg class="map__marker" width="36px" height="36px">
-        <use xlink:href="./img/sprite.svg#map-marker"></use>
-      </svg>
+      <div class="map__image" id="map">
+      </div>
     </div>
   </main>
 
   <footer class="page-footer container">
-    <a class="page-footer__logo">
+    <a class="page-footer__logo" href="#">
       <svg class="logo logo--footer" width="146px" height="40px" aria-label="pink logo">
         <g class="logo__title">
           <use xlink:href="./img/sprite.svg#icon-logo-title"></use>
@@ -382,6 +377,9 @@
       </a>
     </div>
   </footer>
+  <script src="https://api-maps.yandex.ru/2.1/?apikey=feb41a37-c229-4389-b72e-c27b3b11c014&lang=ru_RU"
+    type="text/javascript">
+    </script>
   <script src="./script.min.js"></script>
 </body>
 

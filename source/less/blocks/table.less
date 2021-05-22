@@ -55,7 +55,7 @@
 }
 
 .table__data--desc {
-  padding-top: 15px;
+  padding-top: 18px;
   padding-left: 15px;
 
   @media (min-width: @tablet-width) {
@@ -113,20 +113,20 @@
 
 .table__data--yes {
   background-image: url("../img/icons/icon-yes.svg");
-  background-repeat: no-repeat;
-  background-position-y: center;
   background-position-x: 230px;
-
-  @media (min-width: @tablet-width) {
-    background-position: center center;
-  }
+  background-size: 30px 30px;
 }
 
 .table__data--no {
   background-image: url("../img/icons/icon-no.svg");
+  background-position-x: 228px;
+  background-size: 25px 25px;
+}
+
+.table__data--yes,
+.table__data--no {
   background-repeat: no-repeat;
   background-position-y: center;
-  background-position-x: 228px;
 
   @media (min-width: @tablet-width) {
     background-position: center center;

@@ -27,34 +27,6 @@
     align-items: center;
     flex-direction: column;
   }
-
-  @media (min-width: @desktop-width) {
-    &::before {
-      content: "";
-      display: block;
-      background-image: url("../img/icons/icon-review-arrow-left.svg");
-      background-repeat: no-repeat;
-      background-position: center;
-      width: 22px;
-      height: 42px;
-      position: absolute;
-      left: 0;
-      top: 140px;
-    }
-
-    &::after {
-      content: "";
-      display: block;
-      background-image: url("../img/icons/icon-review-arrow-right.svg");
-      background-repeat: no-repeat;
-      background-position: center;
-      width: 22px;
-      height: 42px;
-      position: absolute;
-      right: 0;
-      top: 140px;
-    }
-  }
 }
 
 .reviews__author {
@@ -80,7 +52,7 @@
   font-size: @fs-base;
   line-height: 30px;
 
-  @media (max-width: @mobile-width) {
+  @media (max-width: 659px) {
     display: none;
   }
 
