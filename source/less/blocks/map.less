@@ -1,25 +1,26 @@
 .map {
   position: relative;
-  margin-bottom: 40px;
+  margin-bottom: 44px;
+  height: 200px;
 
   @media (min-width: @tablet-width) {
     margin-bottom: 0;
-  }
-}
-
-.map__image {
-  width: 100%;
-  height: 200px;
-  overflow: hidden;
-  display: block;
-
-  @media (min-width: @tablet-width) {
     height: 374px;
   }
 
   @media (min-width: @desktop-width) {
+    margin-bottom: 0;
     height: 502px;
   }
+}
+
+.map__image {
+  height: 100%;
+  border: none;
+  width: 100%;
+  left: 0;
+  top: 0;
+  position: absolute;
 
   img {
     width: 100%;
@@ -32,15 +33,13 @@
   position: absolute;
   top: 0;
   color: @bg-white;
+  z-index: 1;
+
+  @media (min-width: @tablet-width) {
+    height: 67px;
+  }
 
   @media (min-width: @desktop-width) {
     height: 104px;
   }
-}
-
-.map__marker {
-  position: absolute;
-  left: 50%;
-  top: 56%;
-  transform: translate(-50%, -50%);
 }

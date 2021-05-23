@@ -5,7 +5,10 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>HTML Academy: Пинк</title>
-  <link href="css/style.css" rel="stylesheet">
+  <link href="css/style.min.css" rel="stylesheet">
+  <link rel="preload" href="fonts/opensans.woff2" as="font">
+  <link rel="preload" href="fonts/opensansbold.woff2" as="font">
+  <link rel="preload" href="fonts/opensanslight.woff2" as="font">
 </head>
 
 <body class="page">
@@ -95,9 +98,9 @@
         </fieldset>
 
         <fieldset class="form__fieldset form__fieldset--adventures form__fieldset--grey">
-          <p class="form__legend">
+          <legend class="form__legend">
             Ваши безбашенные достижения в путешествии
-          </p>
+          </legend>
           <ul class="form__list">
             <li class="form__item input">
               <input class="input__field input__field--checkbox visually-hidden" type="checkbox" id="shark-selfie"
@@ -150,7 +153,7 @@
         </fieldset>
 
         <fieldset class="form__fieldset form__fieldset--contacts">
-          <p class="form__legend">Контактная информация</p>
+          <legend class="form__legend">Контактная информация</legend>
           <div class="form__input input">
             <input class="input__field" type="tel" id="phone" placeholder="Номер, пожалуйста">
             <div class="input__icon-wrapper">
@@ -175,9 +178,9 @@
         </fieldset>
 
         <fieldset class="form__fieldset form__fieldset--app form__fieldset--grey">
-          <p class="form__legend">
+          <legend class="form__legend">
             С каким приложением путешествовали?
-          </p>
+          </legend>
           <ul class="form__list">
             <li class="form__item input">
               <input class="input__radio visually-hidden" type="radio" id="ios_pink" value="ios_pink" name="used_app"
@@ -208,7 +211,7 @@
             placeholder="Можно прям в красках, не стесняясь в выражениях"></textarea>
         </div>
         <div class="form__submit-wrapper">
-          <button class="button button--submit" type="submit" disabled><span class="button__title">Отправить
+          <button class="button button--submit" type="submit"><span class="button__title">Отправить
               форму</span></button>
           <span class="form__intro form__intro--required-t">- Обязательные<span
               class="form__intro form__intro--required-d"> для заполнения</span> поля</span>
@@ -238,7 +241,7 @@
   </main>
 
   <footer class="page-footer container">
-    <a class="page-footer__logo">
+    <a class="page-footer__logo" href="index.html">
       <svg class="logo logo--footer" width="146px" height="40px" aria-label="pink logo">
         <g class="logo__title">
           <use xlink:href="./img/sprite.svg#icon-logo-title"></use>
@@ -292,7 +295,7 @@
       </a>
     </div>
   </footer>
-  <script src="./js/toggle-menu.js"></script>
+  <script src="./script.min.js"></script>
 </body>
 
 </html>

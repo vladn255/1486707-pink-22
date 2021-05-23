@@ -2,16 +2,49 @@
   color: @bg-red;
   width: 48px;
   height: 48px;
+  margin-bottom: 28px;
+  cursor: pointer;
+  transition: all 0.2s;
 
-  @media (max-width: @mobile-width) {
-    &:checked {
-      color: blue;
+  &:hover {
+    color: @font-black;
+  }
+
+  &:active {
+    color: @font-black;
+    opacity: 0.3;
+  }
+
+  @media (max-width: 659px) {
+    &--contrast {
+      width: 64px;
+      height: 40px;
+      padding-right: 23px;
+      padding-top: 10px;
     }
   }
 
   @media (min-width: @tablet-width) {
-    width: 24px;
-    height: 24px;
+    margin-bottom: 0;
+
+    &--crop {
+      width: 34px;
+      height: 33px;
+      margin-right: 28px;
+    }
+
+    &--fill {
+      width: 38px;
+      height: 43px;
+      margin-right: 25px;
+    }
+
+    &--contrast {
+      width: 22px;
+      height: 29px;
+      margin-right: 36px;
+      margin-left: 5px;
+    }
   }
 
   @media (min-width: @desktop-width) {
@@ -31,12 +64,13 @@
       width: 64px;
       height: 32px;
       margin-right: 43px;
+      margin-left: 0;
     }
   }
 }
 
 .radio--hidden {
-  @media (max-width: @mobile-width) {
+  @media (max-width: @mobile-width-max) {
     .tools-set__range {
       display: none;
     }
@@ -44,6 +78,16 @@
     .radio__icon {
       color: @bg-darkgrey;
       opacity: 0.3;
+      transition: all 0.2s;
+
+      &:hover {
+        color: @font-black;
+      }
+
+      &:active {
+        color: @font-black;
+        opacity: 0.3;
+      }
     }
   }
 }

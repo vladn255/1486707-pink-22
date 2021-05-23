@@ -11,21 +11,31 @@
 }
 
 .main-nav .main-nav__wrapper {
-  @media (max-width: @desktop-width) {
-    display: none;
-  }
+  display: none;
 
   @media (min-width: @desktop-width) {
     display: flex;
   }
 }
 
-.main-nav--opened .main-nav__wrapper {
+.main-nav--opened {
+  background-color: @bg-darkgrey;
+
   @media (max-width: @desktop-width) {
-    display: block;
+    .main-nav__wrapper {
+      display: block;
+    }
   }
 }
 
-.main-nav--nojs .page-header__logo-toggle {
-  display: none;
+.main-nav--nojs {
+  background-color: @bg-darkgrey;
+
+  .main-nav__wrapper {
+    display: block;
+  }
+
+  .page-header__toggle {
+    display: none;
+  }
 }

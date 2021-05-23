@@ -2,29 +2,35 @@
   position: relative;
   text-transform: uppercase;
   background-color: @bg-lightgrey;
-  padding-bottom: 48px;
-  padding-top: 76px;
+  padding-bottom: 47px;
+  padding-top: 74px;
 
   &::before {
     content: "";
     display: block;
     position: absolute;
     left: 0;
-    top: -100px;
+    top: -30px;
     width: 0;
     height: 0;
     border-right: 100vw solid @bg-lightgrey;
-    border-top: 100px solid transparent;
+    border-top: 30px solid transparent;
   }
 
   @media (min-width: @tablet-width) {
-    padding-top: 70px;
+    padding-top: 50px;
     padding-bottom: 70px;
   }
 
   @media (min-width: @desktop-width) {
     padding-top: 55px;
-    padding-bottom: 100px;
+    padding-bottom: 95px;
+
+    &::before {
+      top: -100px;
+      border-right: 100vw solid @bg-lightgrey;
+      border-top: 100px solid transparent;
+    }
   }
 }
 
@@ -33,7 +39,7 @@
   position: absolute;
   width: 100%;
   left: -110px;
-  top: 12px;
+  top: 9px;
   transform: rotate(-45deg);
 
   font-size: @fs-base;
@@ -44,9 +50,10 @@
   @media (min-width: @tablet-width) {
     left: -60px;
     top: 10px;
+    line-height: 20px;
   }
 
-  @media (min-width: @tablet-width) {
+  @media (min-width: @desktop-width) {
     left: -90px;
     top: 10px;
   }

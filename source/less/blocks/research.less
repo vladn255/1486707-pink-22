@@ -7,7 +7,7 @@
 
   @media (min-width: @desktop-width) {
     background-color: @bg-lightgrey;
-    padding-bottom: 70px;
+    padding-bottom: 66px;
   }
 }
 
@@ -36,7 +36,7 @@
   @media (min-width: @desktop-width) {
     margin-right: 0;
     width: 298px;
-    height: 345px;
+    height: 350px;
   }
 }
 
@@ -85,6 +85,16 @@
   line-height: 24px;
   color: @font-red;
   text-decoration-line: underline;
+  transition: all 0.2s;
+
+  &[href]:hover {
+    color: @font-black;
+  }
+
+  &[href]:active {
+    color: @font-black;
+    opacity: 0.3;
+  }
 
   @media (min-width: @desktop-width) {
     font-size: 18px;

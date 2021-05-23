@@ -1,21 +1,20 @@
 .features {
   background-color: @bg-lightgrey;
-  padding-top: 43px;
+  padding-top: 51px;
   text-align: center;
   position: relative;
   z-index: -2;
-  overflow: hidden;
 
   &::before {
     content: "";
     display: block;
     position: absolute;
     left: 0;
-    top: -100px;
+    top: -30px;
     width: 0;
     height: 0;
     border-right: 100vw solid @bg-lightgrey;
-    border-top: 100px solid transparent;
+    border-top: 30px solid transparent;
     z-index: -2;
   }
 
@@ -24,16 +23,28 @@
     flex-direction: row;
     justify-content: start;
     align-items: start;
-    padding-top: 40px;
-    padding-bottom: 10px;
-    margin-bottom: 53px;
+    padding-top: 10px;
+    padding-bottom: 48px;
+    margin-bottom: 50px;
     overflow: visible;
+
+    &::before {
+      top: -70px;
+      border-right: 100vw solid @bg-lightgrey;
+      border-top: 70px solid transparent;
+    }
   }
 
   @media (min-width: @desktop-width) {
     margin-bottom: -40px;
     padding-top: 0;
     padding-bottom: 10px;
+
+    &::before {
+      top: -100px;
+      border-right: 100vw solid @bg-lightgrey;
+      border-top: 100px solid transparent;
+    }
   }
 }
 
@@ -46,11 +57,15 @@
   justify-content: start;
   align-items: start;
 
+  overflow: hidden;
+  position: relative;
+
   @media (min-width: @tablet-width) {
     width: 53%;
     text-align: start;
-    padding-right: 3px;
+    padding-right: 20px;
     margin-right: 0;
+    overflow: visible;
   }
 
   @media (min-width: @desktop-width) {
@@ -62,7 +77,6 @@
     text-align: center;
     width: @width-default-d;
 
-    position: relative;
     top: -95px;
     padding-right: 0;
     padding-left: 0;
@@ -101,11 +115,12 @@
   z-index: -2;
 
   @media (min-width: @tablet-width) {
-    left: 20px;
+    left: -290px;
     transform: none;
-    bottom: 0;
-    width: 50%;
+    bottom: -52px;
+    width: 100%;
     padding-right: 42px;
+    z-index: 1;
   }
 
   @media (min-width: @desktop-width) {
@@ -134,7 +149,7 @@
     line-height: 30px;
 
     margin-top: 46px;
-    margin-bottom: 25px;
+    margin-bottom: 23px;
     padding-left: 30px;
     padding-right: 30px;
   }

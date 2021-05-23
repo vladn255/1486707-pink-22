@@ -1,17 +1,23 @@
 .post {
-  margin-bottom: 20px;
+  margin-bottom: 19px;
   background-color: @bg-lightgrey;
 
   @media (min-width: @tablet-width) {
     position: relative;
     margin-bottom: 0;
   }
+
+  @media (min-width: @desktop-width) {
+    padding-bottom: 2px;
+    margin-bottom: 4px;
+  }
 }
 
 .post__info {
   padding-left: 17px;
   padding-top: 6px;
-  padding-bottom: 10px;
+  padding-bottom: 12px;
+  padding-right: 10px;
 
   @media (min-width: @tablet-width) {
     padding-top: 10px;
@@ -23,7 +29,7 @@
   }
 
   @media (min-width: @desktop-width) {
-    padding-top: 10px;
+    padding-top: 11px;
     padding-left: 27px;
   }
 }
@@ -65,6 +71,10 @@
     width: 100%;
     text-align: left;
   }
+
+  @media (min-width: @desktop-width) {
+    padding-bottom: 0;
+  }
 }
 
 .post__likes-count {
@@ -84,32 +94,48 @@
     left: 30px;
   }
 
-  &::before {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: 6px;
-    background-image: url("../img/icons/icon-heart.svg");
-    background-repeat: no-repeat;
-    height: 12px;
-    width: 14px;
-
-    @media (min-width: @tablet-width) {
-      left: auto;
-      right: 60px;
-    }
-
-    @media (min-width: @tablet-width) {
-      right: 58px;
-    }
-  }
-
   @media (min-width: @tablet-width) {
     padding-left: 0;
   }
 
   @media (min-width: @desktop-width) {
     left: 27px;
+  }
+}
+
+.post__button {
+  border: none;
+  outline: none;
+  position: absolute;
+  left: -7px;
+  bottom: 2px;
+  background-color: transparent;
+
+  svg {
+    height: 12px;
+    width: 14px;
+    color: @font-red;
+    cursor: pointer;
+    transition: all 0.2s;
+
+    &:hover {
+      color: @font-black;
+    }
+
+    &:active {
+      color: @font-black;
+      opacity: 0.3;
+    }
+  }
+
+  @media (min-width: @tablet-width) {
+    left: auto;
+    right: 60px;
+  }
+
+  @media (min-width: @tablet-width) {
+    right: 53px;
+    bottom: 5px;
   }
 }
 
@@ -120,6 +146,15 @@
   grid-column-end: 3;
   padding-left: 0;
   padding-right: 0;
+  padding-top: 0;
+  padding-bottom: 1px;
+
+  .post__info {
+    padding-top: 14px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+    padding-left: 17px;
+  }
 
   @media (min-width: @tablet-width) {
     margin-bottom: 30px;
@@ -129,15 +164,17 @@
       flex-wrap: wrap;
       justify-content: flex-start;
       align-items: start;
-      padding-top: 15px;
+      padding-top: 24px;
       padding-right: 30px;
       padding-bottom: 25px;
+      padding-left: 28px;
       min-height: 0;
       position: relative;
     }
 
     .post__author {
       order: 0;
+      margin-right: 4px;
     }
 
     .post__time {
@@ -157,6 +194,14 @@
       padding-right: 30px;
       width: auto;
       margin-bottom: 0;
+      left: auto;
+      bottom: auto;
+      right: 0;
+      top: 0;
+    }
+
+    .post__button {
+      right: -5px;
     }
   }
 
@@ -165,8 +210,8 @@
     margin-bottom: 0;
 
     .post__info {
-      padding-top: 25px;
-      padding-bottom: 20px;
+      padding-top: 24px;
+      padding-bottom: 24px;
     }
 
     .post__author {
@@ -174,12 +219,8 @@
     }
 
     .post__likes-count {
-      padding-right: 60px;
+      padding-right: 30px;
       top: 0;
-
-      &::before {
-        right: 30px;
-      }
     }
   }
 }

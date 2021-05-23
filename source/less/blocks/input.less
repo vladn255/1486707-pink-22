@@ -23,6 +23,8 @@
   display: block;
 
   outline: none;
+  transition: all 0.2s;
+  height: 64px;
 
   &:hover {
     border: 2px solid @bg-black;
@@ -36,13 +38,12 @@
     color: @font-black;
   }
 
-  @media (max-width: @mobile-width) {
-    width: 100%;
-  }
+  width: 100%;
 
   @media (min-width: @tablet-width) {
     margin-left: 20px;
     flex-grow: 1;
+    width: auto;
   }
 }
 
@@ -53,7 +54,12 @@
   padding-top: 15px;
   padding-left: 21px;
   line-height: 30px;
-  min-height: 100px;
+  min-height: 200px;
+
+  @media (min-width: @tablet-width) {
+    padding-right: 0;
+    padding-bottom: 10px;
+  }
 
   @media (min-width: @desktop-width) {
     min-height: 127px;
@@ -61,9 +67,7 @@
 }
 
 .input__icon-wrapper {
-  @media (max-width: calc(@tablet-width - 1px)) {
-    display: none;
-  }
+  display: none;
 
   @media (min-width: @tablet-width) {
     display: flex;
@@ -83,6 +87,8 @@
 
 .input__label--checkbox {
   padding-left: 0;
+  transition: all 0.2s;
+  cursor: pointer;
 
   &:hover {
     &::before {
@@ -115,6 +121,9 @@
 }
 
 .input__label--radio {
+  transition: all 0.2s;
+  cursor: pointer;
+
   &:hover {
     &::before {
       border-color: @bullet-grey;

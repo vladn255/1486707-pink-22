@@ -2,6 +2,9 @@
   text-align: center;
   padding-top: 25px;
   width: 100%;
+  background-color: @bg-darkgrey;
+  margin: auto;
+  padding-bottom: 31px;
 
   position: relative;
   z-index: 2;
@@ -9,6 +12,10 @@
   @media (min-width: @tablet-width) {
     text-align: start;
     max-width: 300px;
+    background-color: transparent;
+    margin-left: 0;
+    padding-top: 32px;
+    padding-bottom: 0;
   }
 
   @media (min-width: @desktop-width) {
@@ -28,6 +35,8 @@
   padding-right: 0;
   padding-top: 16px;
   padding-bottom: 14px;
+  transition: all 0.2s;
+  max-width: 280px;
 
   &[href]:hover {
     color: @font-red;
@@ -57,16 +66,18 @@
 
 .download-info__platforms-list {
   list-style: none;
-  margin: 0;
+  margin: auto;
   padding: 0;
   display: flex;
   justify-content: center;
   align-items: center;
   padding-left: 35px;
   margin-bottom: 10px;
+  max-width: 280px;
 
   @media (min-width: @tablet-width) {
     margin-bottom: 25px;
+    max-width: 3000px;
   }
 
   @media (min-width: @desktop-width) {
@@ -84,9 +95,11 @@
   line-height: @lh-title;
   text-align: center;
   margin: auto;
+  max-width: 280px;
 
   @media (min-width: @tablet-width) {
     font-size: 17px;
     line-height: 24px;
+    max-width: 300px;
   }
 }

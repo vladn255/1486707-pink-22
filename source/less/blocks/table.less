@@ -1,16 +1,16 @@
 .table {
   border-collapse: collapse;
   width: calc(280px * 4);
-  transform: translate(-51%);
+  transform: translate(-50%);
   margin-bottom: 40px;
 
   @media (min-width: @tablet-width) {
     margin: auto;
-    width: 100%;
+    width: @width-default-t;
     transform: none;
   }
 
-  @media (min-width: @tablet-width) {
+  @media (min-width: @desktop-width) {
     margin: auto;
     width: @width-default-d;
     transform: none;
@@ -22,8 +22,10 @@
   background-color: @bg-white;
   border: 2px solid @bg-lightgrey;
   box-sizing: border-box;
-  padding-top: 10px;
-  padding-bottom: 15px;
+  padding-top: 9px;
+  padding-bottom: 11px;
+  padding-left: 10px;
+  padding-right: 10px;
 
   @media (min-width: @tablet-width) {
     min-width: 152px;
@@ -39,23 +41,24 @@
 .table__headline {
   background-color: @bg-darkgrey;
   color: @font-white;
+  border-right: 1px solid @bg-lightgrey;
 }
 
 .table__text {
+  padding-left: 7px;
+
   @media (min-width: @tablet-width) {
-    padding-top: 6px;
-    padding-bottom: 11px;
     padding-left: 14px;
   }
 }
 
 .table__data--desc {
-  padding-top: 15px;
+  padding-top: 19px;
   padding-left: 15px;
 
   @media (min-width: @tablet-width) {
-    padding-top: 6px;
-    padding-bottom: 11px;
+    padding-top: 10px;
+    padding-bottom: 5px;
     padding-left: 0;
   }
 
@@ -108,18 +111,20 @@
 
 .table__data--yes {
   background-image: url("../img/icons/icon-yes.svg");
-  background-repeat: no-repeat;
-  background-position: center right;
-
-  @media (min-width: @tablet-width) {
-    background-position: center center;
-  }
+  background-position-x: 226px;
+  background-size: 30px 30px;
 }
 
 .table__data--no {
   background-image: url("../img/icons/icon-no.svg");
+  background-position-x: 228px;
+  background-size: 25px 25px;
+}
+
+.table__data--yes,
+.table__data--no {
   background-repeat: no-repeat;
-  background-position: center right;
+  background-position-y: center;
 
   @media (min-width: @tablet-width) {
     background-position: center center;
