@@ -6,9 +6,9 @@
   background-position-y: top;
   background-repeat: no-repeat;
   background-size: cover;
-  min-height: 240px;
+  min-height: 241px;
   padding-top: 100px;
-  padding-bottom: 44px;
+  padding-bottom: 42px;
 
   @media (min-resolution: 2dppx) {
     background-image: url("../img/banner/mobile/bg-back-mobile@2x.jpg");
@@ -67,6 +67,7 @@
   @media (min-width: @tablet-width) {
     position: relative;
     z-index: 2;
+    padding-left: 40px;
   }
 
   @media (min-width: @desktop-width) {
@@ -111,7 +112,7 @@
       width: 900px;
       height: 645px;
       top: 56px;
-      transform: translate(-135px);
+      transform: translate(-125px);
 
       @media (min-resolution: 2dppx) {
         background-image: url("../img/banner/desktop/iphone-hand-desktop@2x.png");
@@ -163,7 +164,7 @@
     .banner__wrapper {
       padding-top: 70px;
       width: @width-default-t;
-      padding-bottom: 115px;
+      padding-bottom: 113px;
     }
   }
 
@@ -175,7 +176,12 @@
       padding-top: 43px;
       padding-left: 0;
       padding-right: 0;
-      padding-bottom: 122px;
+      padding-bottom: 123px;
+      width: @width-default-d;
+    }
+
+    .banner__text {
+      padding-left: 20px;
     }
   }
 }

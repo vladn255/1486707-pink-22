@@ -24,6 +24,7 @@
 
   outline: none;
   transition: all 0.2s;
+  height: 64px;
 
   &:hover {
     border: 2px solid @bg-black;
@@ -37,13 +38,12 @@
     color: @font-black;
   }
 
-  @media (max-width: @mobile-width) {
-    width: 100%;
-  }
+  width: 100%;
 
   @media (min-width: @tablet-width) {
     margin-left: 20px;
     flex-grow: 1;
+    width: auto;
   }
 }
 
