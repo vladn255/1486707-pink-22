@@ -54,7 +54,8 @@
   display: block;
   transition: all 0.2s;
 
-  &:hover {
+  &:hover,
+  &:focus {
     &::-webkit-slider-thumb {
       border: 2px solid @bg-black;
     }
@@ -66,11 +67,13 @@
 
   &:active {
     &::-webkit-slider-thumb {
-      border: 2px solid @bg-darkgrey;
+      border: 2px solid @bg-red;
+      background-color: @bg-red;
     }
 
     &::-moz-range-thumb {
-      border: 2px solid @bg-darkgrey;
+      border: 2px solid @bg-red;
+      background-color: @bg-red;
     }
   }
 
